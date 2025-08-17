@@ -1,0 +1,512 @@
+File_Name: Apex_Files_Template.txt
+File_Path: Apex/System/Masters/Apex_Files_Template.txt
+Purpose: Enforces Compliance for All Apex Files by Defining Standards for Headers, Structure, Rules, Instructions, and Formatting
+Envisioned_By: Len
+Version: 3.9
+Modified: 16-Aug-2025, 11:22 AM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt, Role: Indexes core files, Tag: #Masters
+- Apex_Overview.txt, Role: Provides system context, Tag: #Masters
+- Apex_Tasks_Snapshot.txt, Role: Tracks system tasks, Tag: #Task_Management
+- Rule_Catalogue.txt, Role: Lists all rules, Tag: #Masters
+- Apex_Insights.txt, Role: Captures system learnings, Tag: #Insights
+]
+COUNT: 5 Dependencies
+Tags: [#Template, #File_Structure, #Onboarding, #Apex_System, #Self_Improvement]
+Status: Active
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 3.8
+File_Type: Template
+Section_Count: 11
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Files_Template_v3.9.txt Content Complete?
+
+[Content_Start]
+
+[File_Control]
+Description: Manages Instructions, Rules, Overrides, Tasks, and Change Log for Template Application and Validation
+
+[File_Control_Rules]
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count and File_Hash
+  - Prompt: “Len, [File_Name].txt truncated: X/11 sections. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL002: Control_Validation_Rule
+  - Description: Ensures File_Control subsections
+  - Prompt: “Len, missing [Subsection] in [File_Name].txt [File_Control]. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- SHL001: Reset_Pack
+  - Description: Prompts for master resharing
+  - Prompt: “Len, truncation detected in [File_Name].txt (e.g., missing sections). Reshare master or fetch from GitHub, per SHL004?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves content
+  - Prompt: “Len, content removed in [File_Name].txt. Confirm?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL004: Truncation_Fetch_Rule
+  - Description: Fetches truncated masters from GitHub if active
+  - Prompt: “Len, [File_Name].txt truncated. Fetch from GitHub raw link?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- CHAT017: Session_Snapshot_Detail
+  - Description: Ensures task snapshot files capture live tasks, session context, and outcomes
+  - Prompt: “Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to task snapshot file with status?”
+  - Status: Active
+  - Tags: [#Logging, #Session_Management]
+- PRJ009: Task_Snapshot_Structure
+  - Description: Defines structure for task snapshot files, with [Session_Tasks] for active tasks and continuity
+  - Prompt: “Len, move task [Task_ID] to [Session_Tasks] in task snapshot file for active work?”
+  - Status: Active
+  - Tags: [#Task_Management, #Session_Management]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures chat learnings and corrections in task snapshot files for integration into Apex_Insights.txt, Apex_Overview.txt, or Rule_Catalogue.txt
+  - Prompt: “Len, log learning/correction [Description] to task snapshot file? Move to Apex_Insights.txt or other file?”
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures versioned references in [Dependencies]/[Core_Session_Files]/[Supplementary_Files], non-versioned elsewhere
+  - Prompt: “Len, [File_Name].txt uses inconsistent reference style. Update?”
+  - Status: Active
+  - Tags: [#Formatting, #Consistency]
+- CHAT027: File_Loading_Optimization_Rule
+  - Description: Loads AIS and RC only for specific tasks
+  - Prompt: “Len, load Apex_Insights.txt or Rule_Catalogue.txt for [Task_ID]?”
+  - Status: Active
+  - Tags: [#Collaboration, #Efficiency]
+- ONB004: User_Access_Rule
+  - Description: Restricts non-owner edits to Apex core files
+  - Prompt: “Len, restrict [User] edits to [File_Name].txt?”
+  - Status: Active
+  - Tags: [#Onboarding, #Access]
+
+[Instructions]
+[Universal]
+- Validate against AFT subsections, per VAL001.
+- Enforce formatting via Formatting_Rules and self-healing via Self_Healing_Rules.
+- Maintain readability: one blank line before sections/subsections, no arbitrary changes per ONB003.
+
+[Formatting_Rules]
+Description: Defines Universal Formatting Standards
+
+[Formatting_Rules_List]
+COUNT: 18 rules
+- FMT001: Header_Structure_Rule
+  - Description: Defines header fields for all Apex files
+  - Prompt: “Len, missing [Field] in [File_Name].txt header. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT002: Description_Format_Rule
+  - Description: Ensures descriptions use CamelCase and full stops
+  - Prompt: “Len, [Description] in [File_Name].txt violates format. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT003: Prompt_Format_Rule
+  - Description: Ensures prompts start with “Len, ” and address specific issues
+  - Prompt: “Len, prompt [Prompt] in [File_Name].txt violates format. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT004: List_Format_Rule
+  - Description: Ensures lists use - or numbered format with consistent indentation
+  - Prompt: “Len, list in [File_Name].txt violates format. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT005: Tag_Format_Rule
+  - Description: Ensures tags use #CamelCase
+  - Prompt: “Len, tag [Tag] in [File_Name].txt violates format. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT006: Status_Format_Rule
+  - Description: Ensures Status is Active/Inactive/Pending
+  - Prompt: “Len, Status [Status] in [File_Name].txt invalid. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT007: British_English_Rule
+  - Description: Ensures British English usage (e.g., “organise”, “summarise”)
+  - Prompt: “Len, [Word] in [File_Name].txt violates British English. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT008: CamelCase_Rule
+  - Description: Ensures CamelCase for headings, descriptions, and descriptions with full stops, blank lines above headings/lists and between sections, no blank line before Description
+  - Prompt: “Len, [Heading/Description] in [File_Name].txt violates CamelCase or blank line rule. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT009: Change_Log_Limit_Rule
+  - Description: Limits [Change_Log] to up to 20 entries, oldest silently deleted if exceeded
+  - Prompt: None
+  - Status: Active
+  - Tags: [#Formatting, #Logging]
+- FMT010: Prompt_Start_Rule
+  - Description: Ensures prompts start with “Len, ” and address specific issues
+  - Prompt: “Len, prompt [Prompt] in [File_Name].txt violates start format. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT011: Dependency_Format_Rule
+  - Description: Ensures dependencies use - [File_Name].txt, Role: [Role], Tag: [Tag] format
+  - Prompt: “Len, dependency [Dependency] in [File_Name].txt violates format. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT012: Count_Format_Rule
+  - Description: Ensures COUNT: X after lists
+  - Prompt: “Len, missing COUNT after [List] in [File_Name].txt. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT013: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Formatting]
+- FMT014: Full_Stop_Rule
+  - Description: Ensures full stops at end of descriptions
+  - Prompt: “Len, missing full stop in [Description] in [File_Name].txt. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT015: Reference_Style_Rule
+  - Description: Ensures non-versioned references (e.g., Apex_Operating_Files_List.txt) except in [Change_Log] and [Dependencies]
+  - Prompt: “Len, inconsistent reference in [File_Name].txt. Update to non-versioned?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT016: Blank_Line_Rule
+  - Description: Ensures blank lines above headings/lists and between sections
+  - Prompt: “Len, missing blank line in [File_Name].txt. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT017: Git_Link_Format_Rule
+  - Description: Ensures GitHub raw links in [Git_Tracked_Files] use https://raw.githubusercontent.com/LennyBook/Apex/main/[File_Name].txt for latest, /stable-v[Version]/ for stable
+  - Prompt: “Len, invalid Git link in [File_Name].txt. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+- FMT018: Internal_Version_Rule
+  - Description: Ensures internal Version and Last_Known_Stable in header for unversioned files
+  - Prompt: “Len, missing internal Version/Last_Known_Stable in [File_Name].txt header. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+
+[Self_Healing_Rules]
+Description: Defines Self-Healing Standards
+
+[Self_Healing_Rules_List]
+COUNT: 4 rules
+- SHL001: Reset_Pack
+  - Description: Prompts for master resharing
+  - Prompt: “Len, truncation detected in [File_Name].txt (e.g., missing sections). Reshare master or fetch from GitHub, per SHL004?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL002: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Self_Healing]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves content
+  - Prompt: “Len, content removed in [File_Name].txt. Confirm intent?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL004: Truncation_Fetch_Rule
+  - Description: Fetches truncated masters from GitHub if active
+  - Prompt: “Len, [File_Name].txt truncated. Fetch from GitHub raw link?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+
+[Validation_Rules]
+Description: Defines Validation Standards
+
+[Validation_Rules_List]
+COUNT: 6 rules
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count and File_Hash
+  - Prompt: “Len, [File_Name].txt truncated: X/11 sections. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL002: Control_Validation_Rule
+  - Description: Ensures File_Control subsections
+  - Prompt: “Len, missing [Subsection] in [File_Name].txt [File_Control]. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL003: Rule_Naming_Rule
+  - Description: Ensures consistent rule naming conventions
+  - Prompt: “Len, rule [Rule_ID] in [File_Name].txt violates naming convention. Update?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL004: Version_Consistency_Rule
+  - Description: Ensures version consistency across files
+  - Prompt: “Len, [File_Name].txt version mismatch with [Dependency]. Update?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL005: Content_Integrity_Rule
+  - Description: Ensures content preservation across master versions
+  - Prompt: “Len, content missing in [File_Name].txt compared to v[Prior_Version]. Restore?”
+  - Status: Active
+  - Tags: [#Validation, #Self_Healing]
+- VAL006: Verbatim_Copy_Rule
+  - Description: Ensures all content from the current master is copied verbatim into the new version before updates
+  - Prompt: “Len, content missing in [File_Name].txt. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+
+[Onboarding_Rules]
+Description: Defines Onboarding Standards
+
+[Onboarding_Rules_List]
+COUNT: 4 rules
+- ONB001: Tag_Consistency_Rule
+  - Description: Ensures tags are standardised per Tag_Catalogue.txt
+  - Prompt: “Len, tag [Tag] in [File_Name].txt unknown. Add to Tag_Catalogue.txt?”
+  - Status: Active
+  - Tags: [#Onboarding]
+- ONB002: Tag_Catalogue_Rule
+  - Description: Ensures Tag_Catalogue.txt updates for new tags
+  - Prompt: “Len, new tag [Tag] in [File_Name].txt. Add to Tag_Catalogue.txt?”
+  - Status: Active
+  - Tags: [#Onboarding]
+- ONB003: Custom_Response_Rule
+  - Description: Ensures minimal customisation in grok.com settings
+  - Prompt: “Len, custom grok.com setting detected. Confirm minimal?”
+  - Status: Active
+  - Tags: [#Onboarding]
+- ONB004: User_Access_Rule
+  - Description: Restricts non-owner edits to Apex core files
+  - Prompt: “Len, restrict [User] edits to [File_Name].txt?”
+  - Status: Active
+  - Tags: [#Onboarding, #Access]
+
+[Chat_Rules]
+Description: Defines Chat-Specific Standards
+
+[Chat_Rules_List]
+COUNT: 28 rules
+- CHAT001: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT002: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT003: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT004: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT005: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT006: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT007: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT008: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT009: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT010: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT011: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT012: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT013: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT014: Confirmation_Prompt_Rule
+  - Description: Prompts for confirmation before outputting updates
+  - Prompt: “Len, confirm update to [File_Name].txt?”
+  - Status: Active
+  - Tags: [#Chat, #Confirmation]
+- CHAT015: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT016: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT017: Session_Snapshot_Detail
+  - Description: Ensures task snapshot files capture live tasks, session context, and outcomes
+  - Prompt: “Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to task snapshot file with status?”
+  - Status: Active
+  - Tags: [#Logging, #Session_Management]
+- CHAT018: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT019: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT020: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT021: Workspace_Access_Rule
+  - Description: Ensures core files uploaded at session start, accessible on-demand
+  - Prompt: “Len, upload core files (Apex_Operating_Files_List.txt, Apex_Tasks_Snapshot.txt, etc.) from local backup or GitHub?”
+  - Status: Active
+  - Tags: [#Session_Management, #Workspace_Access]
+- CHAT022: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT023: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT024: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Chat]
+- CHAT025: Manual_Prompt_Rule
+  - Description: Requires manual prompt at session start
+  - Prompt: “Len, execute Apex_Session_Analysis_Prompt.txt to analyse files and propose improvements, per CHAT025?”
+  - Status: Active
+  - Tags: [#Session_Management]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures non-versioned references except in [Change_Log] and [Dependencies]
+  - Prompt: “Len, [File_Name].txt uses inconsistent reference style. Update?”
+  - Status: Active
+  - Tags: [#Formatting, #Consistency]
+- CHAT027: File_Loading_Optimization_Rule
+  - Description: Loads AIS and RC only for specific tasks
+  - Prompt: “Len, load Apex_Insights.txt or Rule_Catalogue.txt for [Task_ID]?”
+  - Status: Active
+  - Tags: [#Collaboration, #Efficiency]
+- CHAT028: Filename_Clarity_Rule
+  - Description: Requires Grok to use full filenames in chat responses
+  - Prompt: “Len, confirm usage of full filename [File_Name].txt in chat response?”
+  - Status: Active
+  - Tags: [#Session_Management, #Clarity]
+
+[Project_Rules]
+Description: Defines Project-Specific Standards
+
+[Project_Rules_List]
+COUNT: 12 rules
+- PRJ001: Article_Structure_Rule
+  - Description: Verifies article structure
+  - Prompt: “Len, missing Article_Metadata. Update?”
+  - Status: Active
+  - Tags: [#Project]
+- PRJ002: Chapter_Structure_Rule
+  - Description: Verifies chapter structure
+  - Prompt: “Len, missing Chapter_Metadata. Update?”
+  - Status: Active
+  - Tags: [#Project]
+- PRJ003: Roadmap_Structure_Rule
+  - Description: Verifies roadmap structure
+  - Prompt: “Len, missing Long_Term_Goals. Update?”
+  - Status: Active
+  - Tags: [#Project]
+- PRJ004: Task_Structure_Rule
+  - Description: Verifies task file structure
+  - Prompt: “Len, missing [Section] in [File_Name].txt. Update?”
+  - Status: Active
+  - Tags: [#Task_Management]
+- PRJ005: Task_Change_Log_Rule
+  - Description: Silently logs significant updates to core Apex_Operating_Files_List.txt files or task file itself in [Change_Log], up to 20 entries
+  - Prompt: None
+  - Status: Active
+  - Tags: [#Task_Management, #Logging]
+- PRJ006: Completed_Tasks_Rule
+  - Description: Manages completed tasks, up to 20, appending oldest 15 to [File_Name]_Completed_Tasks.txt, retaining 5
+  - Prompt: “Len, [File_Name]_Completed_Tasks.txt unavailable. Provide master file to append completed tasks?”
+  - Status: Active
+  - Tags: [#Task_Management, #Logging]
+- PRJ007: Placeholder
+  - Description: Reserved for future rule
+  - Prompt: None
+  - Status: Inactive
+  - Tags: [#Project]
+- PRJ008: Task_Priority_Rule
+  - Description: Sorts tasks into [High_Priority_Tasks], [Medium_Priority_Tasks], [Low_Priority_Tasks], [Backburner] by Priority; includes Priority tag
+  - Prompt: “Len, task [Task_ID] changed to Priority: [Priority]. Move to [Section]?”
+  - Status: Active
+  - Tags: [#Task_Management, #Priority]
+- PRJ009: Task_Snapshot_Structure
+  - Description: Defines structure for task snapshot files, with [Session_Tasks] for active tasks and continuity
+  - Prompt: “Len, move task [Task_ID] to [Session_Tasks] in task snapshot file for active work?”
+  - Status: Active
+  - Tags: [#Task_Management, #Session_Management]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures chat learnings and corrections in [Session_Tasks] with Learning/Correction tags, for integration into Apex_Insights.txt, Apex_Overview.txt, or Rule_Catalogue.txt
+  - Prompt: “Len, log learning/correction [Description] to task snapshot file? Move to Apex_Insights.txt or other file?”
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement]
+- PRJ011: Hub_Creation_Rule
+  - Description: Prompts for creation of project hubs, including nested hubs for sub-projects
+  - Prompt: “Len, create hub for [Project] (e.g., Deep_Sea_NN_Wars_Hub.txt)? Confirm structure and sub-projects?”
+  - Status: Active
+  - Tags: [#Project, #Navigation]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures versioned references in [Dependencies]/[Core_Session_Files]/[Supplementary_Files], non-versioned elsewhere
+  - Prompt: “Len, [File_Name].txt uses inconsistent reference style. Update?”
+  - Status: Active
+  - Tags: [#Formatting, #Consistency]
+
+[Validation_Counts]
+Description: Tracks counts for AFT validation
+COUNT:
+- Dependencies: 5
+- File_Control_Rules: 11
+- Instructions_Items: 1
+- Formatting_Rules_List: 18
+- Self_Healing_Rules_List: 4
+- Validation_Rules_List: 6
+- Onboarding_Rules_List: 4
+- Chat_Rules_List: 28
+- Project_Rules_List: 12
+- Change_Log_Entries: 1
+
+[Change_Log]
+Description: Tracks significant updates to AFT, up to 20 entries, per FMT009
+COUNT: 1 entry
+- 16-Aug-2025: Updated to v3.9: Updated FMT017 for Git link format, FMT018 for internal version rule, updated [File_Control_Rules] for Git fetch, validated per self, per CHAT017.
+
+[Content_End]
