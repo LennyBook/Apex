@@ -1,0 +1,110 @@
+File_Name: Apex_Hub.txt
+File_Path: Apex/System/Masters/Apex_Hub.txt
+Purpose: Central Navigation Hub for Apex System Projects and Files
+Envisioned_By: Len
+Version: 1.1
+Modified: 16-Aug-2025, 11:22 AM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt, Role: Indexes core files, Tag: #Masters
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
+- Apex_Overview.txt, Role: Provides system overview, Tag: #Masters
+- Apex_Tasks_Snapshot.txt, Role: Tracks system tasks, Tag: #Task_Management
+- Apex_Insights.txt, Role: Captures system learnings, Tag: #Insights
+- Rule_Catalogue.txt, Role: Lists all rules, Tag: #Masters
+- Tag_Catalogue.txt, Role: Standardises tags, Tag: #Masters
+]
+COUNT: 7 Dependencies
+Tags: [#Hub, #Navigation, #Apex_System]
+Status: Active
+Owner: Len
+Hub: Self (Apex_Hub.txt)
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 1.0
+File_Type: Hub
+Section_Count: 4
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Hub_v1.1.txt Content Complete?
+
+[Content_Start]
+
+[File_Control]
+Description: Manages Instructions, Rules, and Change Log for Hub Navigation
+
+[File_Control_Rules]
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count and File_Hash
+  - Prompt: “Len, Apex_Hub.txt truncated: X/4 sections. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves content
+  - Prompt: “Len, content removed in Apex_Hub.txt. Confirm intent?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- CHAT017: Session_Snapshot_Detail
+  - Prompt: “Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Tasks_Snapshot.txt?”
+  - Status: Active
+  - Tags: [#Logging]
+- PRJ010: Learning_Capture_Rule
+  - Prompt: “Len, log learning [Description] to Apex_Tasks_Snapshot.txt and Apex_Insights.txt?”
+  - Status: Active
+  - Tags: [#Self_Improvement]
+- CHAT026: Reference_Consistency_Rule
+  - Prompt: “Len, [File_Name].txt uses inconsistent reference style. Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+
+[Instructions]
+- Use Apex_Hub.txt for central navigation to project hubs and files.
+- List projects in [Projects] with Path, Hub, Status, Tags.
+- Use British English, FMT008 formatting.
+- Update with new projects/hubs per PRJ011.
+
+[Projects]
+Description: Lists active projects and their hubs
+COUNT: 7 projects
+1. Project: Apex_System
+   - Path: Apex/System
+   - Hub: Apex_Hub.txt
+   - Status: Active
+   - Tags: [#Apex_System]
+2. Project: Len_Writing
+   - Path: Apex/Projects/Len_Writing
+   - Hub: Len_Writing_Hub.txt
+  - Status: Active
+  - Tags: [#Writing]
+3. Project: Video_Games
+   - Path: Apex/Projects/Video_Games
+   - Hub: Video_Game_Hub.txt
+   - Status: Active
+   - Tags: [#Video_Games]
+4. Project: Home_Household
+   - Path: Apex/Projects/Home_Household
+   - Hub: Home_Household_Hub.txt
+   - Status: Active
+   - Tags: [#Home_Household]
+5. Project: Websites
+   - Path: Apex/Projects/Websites
+   - Hub: Websites_Hub.txt
+   - Status: Active
+   - Tags: [#Websites]
+6. Project: Deep_Sea_NN_Wars
+   - Path: Apex/Projects/Video_Games/Deep_Sea_NN_Wars
+   - Hub: Deep_Sea_NN_Wars_Hub.txt
+   - Status: Active
+   - Tags: [#Video_Games]
+7. Project: Futures_Present_Past
+   - Path: Apex/Projects/Video_Games/Futures_Present_Past
+   - Hub: Futures_Present_Past_Hub.txt
+   - Status: Active
+   - Tags: [#Video_Games]
+
+[Change_Log]
+Description: Tracks updates to Apex_Hub.txt, up to 10 entries
+COUNT: 1 entry
+- 16-Aug-2025: Updated to v1.1: Updated Dependencies to Apex_Operating_Files_List.txt, added Git integration note in [Instructions], validated per Apex_Files_Template.txt, per CHAT017.
+
+[Content_End]
