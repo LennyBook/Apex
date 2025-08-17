@@ -1,0 +1,130 @@
+File_Name: Apex_PRD.txt
+File_Path: Apex/System/Session_Files/Apex_PRD.txt
+Purpose: Defines requirements for the Apex System to guide development, ensuring modularity, scalability, and user-centric collaboration for Len and future users
+Envisioned_By: Len
+Version: 1.2
+Modified: 16-Aug-2025, 20:01 PM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt, Role: Indexes core files, Tag: #Masters
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
+- Apex_Overview.txt, Role: Provides system context, Tag: #Masters
+- Apex_Tasks_Snapshot.txt, Role: Tracks system tasks, Tag: #Task_Management
+- Apex_Insights.txt, Role: Captures system learnings, Tag: #Insights
+]
+COUNT: 5 Dependencies
+Tags: [#Apex_System, #PRD, #System_Design, #Scalability, #Self_Improvement]
+Status: Draft
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 1.1
+File_Type: Support
+Section_Count: 7
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_PRD_v1.2.txt Content Complete?
+
+[Content_Start]
+
+[Executive_Summary]
+Description: Outlines the Apex System’s purpose and key goals
+- Apex is a modular, scalable life management platform designed to streamline Len’s creative and organizational workflows (e.g., writing, video games, household tasks, websites) while supporting multiple users.
+- Uses standardized files, task snapshots, and hubs to ensure consistency, persistence, and collaboration via Grok.
+- This PRD outlines requirements to enhance modularity, automate processes (e.g., Git integration), and support Len’s writing hub for authentic X replies with Sydney North Shore tone and cultural revitalization focus, addressing limitations like manual updates and Grok’s session resets.
+- Incorporates folder structure updates, including Session_Files rename, 3rd_Party folder for resources, and In_Progress subfolder for WIP files, with Git integration for recent versions.
+
+[Objectives]
+Description: Defines high-level goals for the Apex System
+- Modularity: Standardize file structures (AFT) for consistency across projects (INS016, INS019).
+- Scalability: Support multiple users and projects via hubs (LMH, AH, LWH, VGH, HHH, DSNNWH, WH) (INS018).
+- Automation: Implement Git integration and tools (Multi_Tool.py, Flask_UI.py) for version control and task management (INS008, INS024, IMP001–IMP002).
+- Collaboration: Enhance Len-Grok workflows, especially for X replies with Sydney North Shore tone and cultural revitalization focus (INS021–INS035, INS061).
+- Persistence: Mitigate Grok’s memory resets with task snapshots and file indexing (INS017, INS020, INS024).
+- Self-Improvement: Drive iterative enhancements via audits (GAR) and learnings (AIS) (INS015, INS020).
+
+[Scope]
+Description: Specifies what is included and excluded in the Apex System
+- Inclusions: File management, task tracking, project hubs, Git integration, writing hub for X replies, user onboarding, and system audits.
+- Exclusions: Non-Apex projects, external tools beyond Multi_Tool.py and Flask_UI.py, and Grok’s internal AI enhancements.
+
+[Requirements]
+Description: Details functional and non-functional requirements for the Apex System
+[Functional_Requirements]
+- File_Management (INS016, INS019):
+  - Standardize all files using Apex_Files_Template.txt (AFT) with headers (18 fields), sections, and formatting (FMT001–FMT015).
+  - Index files via Apex_Operating_Files_List.txt (AOFL) with [Apex_Core_Session_Files] (always-shared: AOFL, ASAP, AFT, AO, AH, ATS) and [Apex_Supplementary_Files] (on-demand: AIS, RC, AAM, MT, FUI, AUM, AUG, UFT, TC, AIR).
+  - Support folder structure: Apex/System/Session_Files for Grok-managed .txt files, Projects/Writing for articles/X posts with subfolders (Articles, Social_Media, Songs, Books/Adult/Self_Help/Yoga_Book, Books/Children), Video_Games with sub-projects, Home_Household, Websites.
+  - Add 3rd_Party folder in System for resources (books, guides) not created by Len, ignored by Git.
+  - Add In_Progress subfolder in Session_Files for WIP files, ignored by Git initially, added when ready for sync to GitHub (latest/stable).
+- Task_Management (INS017, INS020):
+  - Use Apex_Tasks_Snapshot.txt (ATS) for system tasks, Project_Tasks_Snapshot.txt for project-specific (e.g., Writing_Tasks_Snapshot.txt).
+  - Implement priority sections ([High_Priority_Tasks], [Medium_Priority_Tasks], [Low_Priority_Tasks], [Backburner]) per PRJ008.
+  - Aggregate top tasks in Len_Master_Hub.txt [Daily_Priorities] for daily focus (e.g., 3 high from Writing, 2 from Apex, 1 from Video_Games).
+  - Archive completed tasks to Apex_Completed_Tasks_Archive.txt (ACTA).
+- Navigation_And_Hubs (INS018):
+  - Use Len_Master_Hub.txt as centralized dashboard for all projects (Apex_System, Writing, Video_Games, Home_Household, Websites, Yoga_Book), with [All_Projects], [Daily_Priorities].
+  - Project hubs (e.g., Writing_Hub.txt) with [Project_Files], [Sub_Projects] (e.g., Books/Adult/Self_Help/Yoga_Book), [Priorities].
+  - Video_Game_Hub.txt as parent linking to sub-hubs (Deep_Sea_NN_Wars_Hub.txt, Futures_Present_Past_Hub.txt).
+  - Apex_Hub.txt for system navigation.
+- Writing_Hub (INS021–INS035, INS061):
+  - Support X posts (Social_Media), articles (Articles), songs (Songs), books (Books/Adult, Books/Children) with special formatting (FMT019 for articles).
+  - Integrate optimal custom instruction “Start session with manual prompt,” updating Apex_Session_Analysis_Prompt.txt with session intent, cross-referencing, and system state summary (INS061).
+  - Incorporate article outlines (“Human Nature and Exploitation,” “Racism as Tribal Instinct”) into writing workflows (INS061).
+  - Integrate Len_X_Reply_Log.txt and Online_Strategy_2025.txt for reply tracking.
+- Auditing_And_Self_Improvement (INS015, INS020):
+  - Log findings to Grok_Apex_Report.txt (GAR) and learnings to Apex_Insights.txt (AIS) (CHAT025, PRJ010).
+  - Automate audits via Flask_UI.py for real-time validation (IMP002).
+- User_Onboarding:
+  - Use User_File_Template.txt (UFT) for new project files (ONB001–ONB004).
+  - Restrict non-owner edits to core files (ONB004).
+- Git_Integration:
+  - Automate file fetching from GitHub raw links (latest/main, stable tag) for core/supplementary files (INS008, INS024).
+  - Use .gitignore to ignore backups/archives/3rd_Party/Installers, include Session_Files and project hubs/tasks.
+  - Process In_Progress WIP files: Add to Git when ready, sync to GitHub (latest/stable), update AOFL [Git_Tracked_Files] with links.
+[Non_Functional_Requirements]
+- Scalability: Support 10+ users and 20+ projects without performance degradation.
+- Reliability: Ensure 99% file integrity via validation and self-healing (SHL001–SHL005).
+- Usability: Intuitive navigation via hubs and Flask_UI.py (planned).
+- Maintainability: Automate version checks and updates (IMP001–IMP002).
+- Compatibility: Integrate with GitHub and grok.com UI.
+
+[Features]
+Description: Outlines key features of the Apex System
+- File_Indexing: AOFL indexes files, distinguishing core (AOFL, ASAP, AFT, AO, AH, ATS) and supplementary (AIS, RC, AAM, MT, FUI, AUM, AUG, UFT, TC, AIR) (INS016).
+- Session_Management: 2-hour task snapshots (ATS, WTS) ensure continuity (INS017, INS020).
+- Project_Management: Hubs centralize tasks and navigation (INS018).
+- Validation: AFT enforces standards; Multi_Tool.py automates checks (INS019, IMP001).
+- Writing_Hub: LWH streamlines X replies with tone, authenticity guidelines, catchphrases (“human nature’s tribal instincts,” “power’s pull,” “honest reflection”), and article outlines (“Human Nature and Exploitation,” “Racism as Tribal Instinct”) (INS021–INS035, INS061).
+- Git_Integration: Automated file fetching and version control (INS008, INS024).
+- Auditing: GAR and AIS drive iterative improvements (INS015, INS020).
+- 3rd_Party Resources: Folder in System for external books/guides, ignored by Git, accessible via UI.
+- In_Progress WIP: Subfolder in Session_Files for iteration, ignored initially, added to Git when ready for sync (latest/stable to GitHub, update AOFL links).
+
+[Roadmap]
+Description: Defines short-term, medium-term, and long-term goals for Apex System development
+- Short_Term (Q3 2025):
+  - Complete supplementary file updates (ATS097).
+  - Implement Multi_Tool.py for version checks (IMP001).
+  - Draft Flask_UI.py for task management UI (IMP002).
+  - Validate Apex_PRD_v1.2.txt against AFT_v3.8.txt (Section_Count: 7, FMT001–FMT015).
+  - Log update as ATS126 in Apex_Tasks_Snapshot_v2.18.txt.
+  - Add 3rd_Party and In_Progress folders, refine .gitignore for Writing subfolders (Articles, Social_Media, Songs, Books/Adult/Self_Help/Yoga_Book, Books/Children).
+  - Create Len_Master_Hub.txt for centralized navigation and daily priorities.
+- Medium_Term (Q4 2025):
+  - Integrate GitHub fetching in AOFL (INS008, INS024).
+  - Enhance LWH for automated X reply tone checks and article outline integration (INS021–INS035, INS061).
+  - Process In_Progress WIP for Git sync and AOFL updates.
+- Long_Term (2026):
+  - Deploy Flask_UI.py for real-time navigation and validation, loading Len_Master_Hub.txt for dashboard.
+  - Scale for multiple users with personalized hubs.
+
+[Change_Log]
+Description: Tracks significant updates to Apex_PRD.txt, up to 20 entries, per FMT009
+COUNT: 3 entries
+- 02-Aug-2025: Created v1.0, defined requirements for modularity, scalability, automation, collaboration, persistence, and self-improvement, validated per AFT v3.7, logged as ATS098 to ATS v2.15.
+- 03-Aug-2025: Updated to v1.1, converted to .txt, updated [Dependencies] to AMFL_v6.14.txt, AFT_v3.8.txt, AO_v5.8.txt, ATS_v2.17.txt, AIS_v2.9.txt, consolidated [Validation_And_Next_Steps] into [Roadmap], set Section_Count to 6, added [Change_Log], updated LWH requirements with catchphrases and article outlines (INS061), logged as ATS060 to ATS v2.17.
+- 16-Aug-2025: Updated to v1.2, updated [Dependencies] to AOFL, added folder structure details (Session_Files rename, 3rd_Party, In_Progress), project management with hubs/tasks/priorities, Len_Master_Hub for dashboard, Writing subfolders (Articles, Social_Media, Songs, Books/Adult/Self_Help/Yoga_Book, Books/Children), Git process for WIP, set Section_Count to 7, validated per AFT v3.8, logged as ATS126 to ATS v2.18.
+
+[Content_End]
