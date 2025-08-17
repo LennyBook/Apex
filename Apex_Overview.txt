@@ -1,0 +1,115 @@
+File_Name: Apex_Overview.txt
+File_Path: Apex/System/Masters/Apex_Overview.txt
+Purpose: Provides a High-Level Overview and Learnings of the Apex System’s Design, Capabilities, and Self-Improvement Mechanisms to Inform Grok for Collaboration with Len and Future Users
+Envisioned_By: Len
+Version: 5.9
+Modified: 16-Aug-2025, 11:22 AM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt, Role: Indexes core files, Tag: #Masters
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
+- Apex_Hub.txt, Role: Central navigation, Tag: #Masters
+- Apex_Tasks_Snapshot.txt, Role: Tracks system tasks, Tag: #Task_Management
+- Apex_Insights.txt, Role: Captures system learnings, Tag: #Insights
+- Rule_Catalogue.txt, Role: Lists all rules, Tag: #Masters
+- Tag_Catalogue.txt, Role: Standardises tags, Tag: #Masters
+- Grok_Apex_Report.txt, Role: Logs audit results, Tag: #System_Audit
+]
+COUNT: 8 Dependencies
+Tags: [#Apex_System, #Overview, #System_Design, #Scalability, #Self_Improvement, #System_Audit]
+Status: Active
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 5.8
+File_Type: Master
+Section_Count: 6
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Overview_v5.9.txt Content Complete?
+
+[Content_Start]
+
+[File_Control]
+Description: Manages Instructions, Rules, Overrides, and Change Log for Overview Maintenance
+
+[File_Control_Rules]
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count and File_Hash
+  - Prompt: “Len, Apex_Overview.txt (AO) truncated: X/6 sections. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL002: Control_Validation_Rule
+  - Description: Ensures File_Control subsections
+  - Prompt: “Len, missing [Subsection] in Apex_Overview.txt (AO) [File_Control]. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- SHL001: Reset_Pack
+  - Description: Prompts for master resharing
+  - Prompt: “Len, truncation detected in Apex_Overview.txt (AO) (e.g., missing sections). Reshare master or fetch from GitHub, per SHL004?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves content
+  - Prompt: “Len, content removed in Apex_Overview.txt (AO). Confirm intent?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL004: Truncation_Fetch_Rule
+  - Description: Fetches truncated masters from GitHub if active
+  - Prompt: “Len, Apex_Overview.txt (AO) truncated. Fetch from GitHub raw link?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- CHAT017: Session_Snapshot_Detail
+  - Description: Ensures task snapshot files capture live tasks, session context, and outcomes
+  - Prompt: “Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Tasks_Snapshot.txt (ATS) with status?”
+  - Status: Active
+  - Tags: [#Logging, #Session_Management]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures chat learnings and corrections in task snapshot files for integration into Apex_Insights.txt, Apex_Overview.txt, or Rule_Catalogue.txt
+  - Prompt: “Len, log learning/correction [Description] to task snapshot file? Move to Apex_Insights.txt or other file?”
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures non-versioned references except in [Change_Log] and [Dependencies]
+  - Prompt: “Len, inconsistent reference in Apex_Overview.txt (AO). Update?”
+  - Status: Active
+  - Tags: [#Formatting]
+
+[Apex_System_Overview]
+Description: High-Level Overview of Apex System
+- Apex is a modular platform for managing projects (Len_Writing, Video_Games, Home_Household, Websites), with self-improvement mechanisms via rules, insights, and audits.
+- Core capabilities: Task tracking (ATS), file standards (AFT), overview (AO), navigation (AH), session analysis (ASAP).
+- Self-improvement: Learnings (AIS), rules (RC), tags (TC), audits (GAR).
+- GitHub integration: Raw links for latest/stable fetches, bypassing workspace truncation.
+
+[Design]
+Description: Core Design Principles
+- Modular structure with standalone masters (unversioned filenames, internal versions).
+- Self-healing via SHL rules, validation (VAL).
+- Scalability for multiple projects via hubs.
+
+[Current_Capabilities]
+Description: Key Features
+- Task management with archiving (ACTA).
+- File access via GitHub raw links for latest/stable.
+- Session start with ASAP for analysis and improvements.
+- Learning capture for continuous evolution.
+
+[Learnings]
+Description: Captured Insights
+- INS001–INS072: From session logs, e.g., INS072: "Git workflow avoids manual renaming, tracks only key versions for latest/stable."
+- AI limitations: Truncation in prompts; GitHub links as workaround.
+
+[System_Evolution]
+Description: Roadmap and Changes
+- Shift to unversioned masters with Git tags for versioning.
+- Deprecate workspace for GitHub fetches.
+- Iterative audits and learnings drive improvements.
+
+[Change_Log]
+Description: Tracks significant updates to AO, up to 10 entries, per FMT009
+COUNT: 1 entry
+- 16-Aug-2025: Updated to v5.9: Updated Dependencies to Apex_Operating_Files_List.txt, added Git integration in [Current_Capabilities] and [Learnings], validated per Apex_Files_Template.txt, per CHAT017.
+
+[Content_End]
