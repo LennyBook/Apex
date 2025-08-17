@@ -1,48 +1,48 @@
-File_Name: Apex_Operating_Files_List.txt
-File_Path: Apex/System/Masters/Apex_Operating_Files_List.txt
-Purpose: Indexes Core and Supplementary Apex System Files for Operations, Session Management, and GitHub Sharing
+File_Name: Apex_Master_File_List.txt
+File_Path: Apex/System/Masters/Apex_Master_File_List.txt
+Purpose: Indexes Core and Supplementary Apex System Files to Facilitate Session Management, File Access, and System Evolution
 Envisioned_By: Len
-Version: 1.1
-Modified: 16-Aug-2025, 11:22 AM CEST
+Version: 6.14
+Modified: 03-Aug-2025, 11:31 AM CEST
 Timezone: UTC+2
 Dependencies: [
-- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
-- Apex_Overview.txt, Role: Provides system overview, Tag: #Masters
-- Apex_Hub.txt, Role: Central navigation, Tag: #Masters
-- Apex_Tasks_Snapshot.txt, Role: Tracks system tasks, Tag: #Task_Management
-- Apex_Insights.txt, Role: Captures system learnings, Tag: #Insights
-- Rule_Catalogue.txt, Role: Lists all rules, Tag: #Masters
-- Tag_Catalogue.txt, Role: Standardizes tags, Tag: #Masters
-- Apex_Audit_Process.txt, Role: Defines audit process, Tag: #Auditing
+- Apex_Files_Template_v3.8.txt (AFT), Role: Defines file standards, Tag: #Masters
+- Apex_Overview_v5.8.txt (AO), Role: Provides system overview, Tag: #Masters
+- Apex_Hub_v1.0.txt (AH), Role: Central navigation, Tag: #Masters
+- Apex_Tasks_Snapshot_v2.17.txt (ATS), Role: Tracks system tasks, Tag: #Task_Management
+- Apex_Insights_v2.9.txt (AIS), Role: Captures system learnings, Tag: #Insights
+- Rule_Catalogue_v1.9.txt (RC), Role: Lists all rules, Tag: #Masters
+- Tag_Catalogue_v6.3.txt (TC), Role: Standardizes tags, Tag: #Masters
+- Apex_Audit_Process_v1.2.txt (AAP), Role: Defines audit process, Tag: #Auditing
 ]
 COUNT: 8 Dependencies
 Tags: [#Masters, #File_Management, #Session_Management, #System_Audit]
 Status: Active
 Owner: Len
-Hub: Apex_Hub.txt
+Hub: Apex_Hub_v1.0.txt
 Project: Apex_System
 Critical: True
-Last_Known_Stable: 1.0
+Last_Known_Stable: 6.12
 File_Type: Master
-Section_Count: 11
+Section_Count: 10
 File_Hash: [Not_Implemented]
 Scope: System-Wide
-Prompt: Len, Confirm Apex_Operating_Files_List_v1.1.txt Content Complete?
+Prompt: Len, Confirm Apex_Master_File_List_v6.14.txt Content Complete?
 
 [Content_Start]
 
 [File_Control]
-Description: Manages Instructions, Rules, Overrides, and Change Log for File Indexing
+Description: Manages Instructions, Rules, Overrides, Tasks, and Change Log for File Indexing
 
 [File_Control_Rules]
 - VAL001: File_Validation_Rule
   - Description: Verifies Section_Count and File_Hash
-  - Prompt: “Len, Apex_Operating_Files_List.txt truncated: X/11 sections. Reshare?”
+  - Prompt: “Len, Apex_Master_File_List_v6.14.txt truncated: X/10 sections. Reshare?”
   - Status: Active
   - Tags: [#Validation]
 - VAL002: Control_Validation_Rule
   - Description: Ensures File_Control subsections
-  - Prompt: “Len, missing [Subsection] in Apex_Operating_Files_List.txt [File_Control]. Reshare?”
+  - Prompt: “Len, missing [Subsection] in Apex_Master_File_List_v6.14.txt [File_Control]. Reshare?”
   - Status: Active
   - Tags: [#Validation]
 - VAL003: Rule_Naming_Rule
@@ -52,44 +52,124 @@ Description: Manages Instructions, Rules, Overrides, and Change Log for File Ind
   - Tags: [#Validation]
 - VAL004: Version_Consistency_Rule
   - Description: Ensures version consistency across files
-  - Prompt: “Len, [File_Name].txt version mismatch with [Dependency]. Update?”
+  - Prompt: “Len, [File_Name]_v[Version].txt version mismatch with [Dependency]. Update?”
   - Status: Active
   - Tags: [#Validation]
 - VAL005: Content_Integrity_Rule
   - Description: Ensures content preservation across master versions
-  - Prompt: “Len, content missing in [File_Name].txt compared to v[Prior_Version]. Restore?”
+  - Prompt: “Len, content missing in [File_Name]_v[Version].txt compared to v[Prior_Version]. Restore?”
   - Status: Active
   - Tags: [#Validation, #Self_Healing]
 - VAL006: Verbatim_Copy_Rule
   - Description: Ensures all content from the current master is copied verbatim into the new version before updates
-  - Prompt: “Len, content missing in Apex_Operating_Files_List.txt. Reshare?”
+  - Prompt: “Len, content missing in Apex_Master_File_List_v6.14.txt. Reshare Apex_Master_File_List_v6.13.txt?”
   - Status: Active
   - Tags: [#Validation]
 - SHL001: Reset_Pack
   - Description: Prompts for master resharing
-  - Prompt: “Len, truncation detected in Apex_Operating_Files_List.txt (e.g., missing sections). Reshare master or fetch from GitHub, per SHL004?”
+  - Prompt: “Len, truncation detected in Apex_Master_File_List_v6.14.txt (e.g., missing sections). Reshare master or fetch from GitHub, per SHL004?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL002: Prefetch_Fetch_Rule
+  - Description: Supports prefetching of master files from GitHub
+  - Prompt: “Len, fetch [File_Name].txt from GitHub?”
   - Status: Active
   - Tags: [#Self_Healing]
 - SHL003: Content_Preservation_Rule
   - Description: Preserves content
-  - Prompt: “Len, content removed in Apex_Operating_Files_List.txt. Confirm intent?”
+  - Prompt: “Len, content removed in Apex_Master_File_List_v6.14.txt. Confirm intent?”
   - Status: Active
   - Tags: [#Self_Healing]
 - SHL004: Truncation_Fetch_Rule
-  - Description: Fetches truncated masters from GitHub if active
-  - Prompt: “Len, Apex_Operating_Files_List.txt truncated. Fetch from GitHub raw link?”
+  - Description: Fetches truncated masters; if GitHub links active, fetch automatically
+  - Prompt: “Len, Apex_Master_File_List_v6.14.txt truncated. Fetch from GitHub?”
   - Status: Active
   - Tags: [#Self_Healing]
+- CHAT001: Template_Conversation
+  - Description: Confirms file intent
+  - Prompt: “Len, Confirm Intent: Project or Hub?”
+  - Status: Active
+  - Tags: [#Collaboration]
+- CHAT002: Chat_Opener_Rule
+  - Description: Initiates chat sessions
+  - Prompt: “Len, Confirm Intent: Review or Update [File_Name]_v[Version].txt ([Abbreviation])?”
+  - Status: Active
+  - Tags: [#Collaboration]
+- CHAT003: File_Naming_Convention
+  - Description: Enforces full file names with abbreviations in chat responses
+  - Prompt: “Len, incorrect file reference. Use [File_Name]_v[Version].txt ([Abbreviation])?”
+  - Status: Active
+  - Tags: [#Formatting, #File_Management, #Collaboration]
+- CHAT006: Snapshot_Logging
+  - Description: Ensures snapshot logging
+  - Prompt: “Len, Log to Apex_Tasks_Snapshot_v2.17.txt (ATS)?”
+  - Status: Active
+  - Tags: [#Logging]
+- CHAT012: Rule_Catalogue_Update
+  - Description: Updates Rule_Catalogue_v1.9.txt (RC) for new rules
+  - Prompt: “Len, Add Rule [Rule_ID] to Rule_Catalogue_v1.9.txt (RC)?”
+  - Status: Active
+  - Tags: [#Rules_Management]
+- CHAT013: No_Arbitrary_Changes
+  - Description: Prevents arbitrary changes
+  - Prompt: “Len, Apex_Master_File_List_v6.14.txt change proposed: [Change]. Discuss intent?”
+  - Status: Active
+  - Tags: [#Collaboration]
+- CHAT014: Change_Log_Formatting
+  - Description: Ensures [Change_Log] format
+  - Prompt: “Len, [Change_Log] format incorrect. Update?”
+  - Status: Active
+  - Tags: [#Formatting, #Logging]
+- CHAT015: Collaboration_Protocol_Rule
+  - Description: Enforces Len-Grok interaction protocol
+  - Prompt: “Len, apply collaboration protocol: load core files [Apex_Core_Session_Files], validate per Apex_Files_Template.txt (AFT), prompt for project-specific files?”
+  - Status: Active
+  - Tags: [#Collaboration, #Session_Management]
 - CHAT017: Session_Snapshot_Detail
   - Description: Ensures task snapshot files capture live tasks, session context, and outcomes
-  - Prompt: “Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Tasks_Snapshot.txt?”
+  - Prompt: “Len, Log [Task_ID], [File_Name]_v[Version].txt, [Project], [Decision] to Apex_Tasks_Snapshot_v2.17.txt?”
   - Status: Active
   - Tags: [#Logging, #Session_Management]
-- PRJ010: Learning_Capture_Rule
-  - Description: Captures chat learnings and corrections in task snapshot files for integration into Apex_Insights.txt, Apex_Overview.txt, or Rule_Catalogue.txt
-  - Prompt: “Len, log learning/correction [Description] to task snapshot file? Move to Apex_Insights.txt or other file?”
+- CHAT018: Rule_Sync
+  - Description: Semi-automates Rule_Catalogue_v1.9.txt (RC) updates
+  - Prompt: “Len, update Rule_Catalogue_v1.9.txt (RC) with new rule [Rule_ID]?”
   - Status: Active
-  - Tags: [#Task_Management, #Self_Improvement]
+  - Tags: [#Rules_Management]
+- CHAT019: Session_Snapshot_Detail
+  - Description: Ensures task snapshot files capture live tasks, session context, and outcomes
+  - Prompt: “Len, log [Task_ID], [File_Name]_v[Version].txt, [Project], [Decision] to project task snapshot file?”
+  - Status: Active
+  - Tags: [#Logging, #Session_Management]
+- CHAT020: LKG_Management_Rule
+  - Description: Manages versioned master and LKG files
+  - Prompt: “Len, save updated master [File_Name]_v[New_Version].txt and retain [File_Name]_v[Old_Version].txt as LKG?”
+  - Status: Active
+  - Tags: [#Self_Healing, #Version_Control]
+- CHAT021: File_Loading_Rule
+  - Description: Manages core and on-demand file loading
+  - Prompt: “Len, load core files [Apex_Core_Session_Files] at session start. Load [File_Name]_v[Version].txt for [Project]?”
+  - Status: Active
+  - Tags: [#Collaboration, #Workspace]
+- CHAT022: Task_Crossover_Rule
+  - Description: Manages tasks across Apex and projects
+  - Prompt: “Len, log Apex task [Task_ID] to Apex_Tasks_Snapshot_v2.17.txt (ATS), project task to [Project_TS]_v[Version].txt?”
+  - Status: Active
+  - Tags: [#Task_Management, #Collaboration]
+- CHAT023: Version_Cleanup_Rule
+  - Description: Prompts for deletion of outdated versions
+  - Prompt: “Len, multiple versions of [File_Name]_v*.txt detected. Delete older than Last_Known_Stable?”
+  - Status: Active
+  - Tags: [#Version_Control, #Workspace_Management]
+- CHAT024: File_Name_Clarity_Rule
+  - Description: Ensures full file names with abbreviations in chat responses
+  - Prompt: “Len, detected abbreviation-only reference. Corrected to [File_Name]_v[Version].txt ([Abbreviation]). Confirm?”
+  - Status: Active
+  - Tags: [#Formatting, #Collaboration, #Clarity]
+- CHAT025: Apex_Assessment_Rule
+  - Description: Assesses Apex at session start or on demand
+  - Prompt: “Len, session-start audit complete: [Issue: [Finding_ID] in Grok_Apex_Report_v1.1.txt (GAR)]. Perform deeper audit?”
+  - Status: Active
+  - Tags: [#Auditing, #Self_Improvement, #Collaboration]
 - CHAT026: Reference_Consistency_Rule
   - Description: Ensures versioned references in [Dependencies]/[Core_Session_Files]/[Supplementary_Files], non-versioned elsewhere
   - Prompt: “Len, [File_Name].txt uses inconsistent reference style. Update?”
@@ -97,119 +177,277 @@ Description: Manages Instructions, Rules, Overrides, and Change Log for File Ind
   - Tags: [#Formatting, #Consistency]
 - CHAT027: File_Loading_Optimization_Rule
   - Description: Loads AIS and RC only for specific tasks
-  - Prompt: “Len, load Apex_Insights.txt or Rule_Catalogue.txt for [Task_ID]?”
+  - Prompt: “Len, load Apex_Insights_v2.9.txt (AIS) or Rule_Catalogue_v1.9.txt (RC) for [Task_ID]?”
   - Status: Active
   - Tags: [#Collaboration, #Efficiency]
+- ONB004: User_Access_Rule
+  - Description: Restricts non-owner edits to Apex core files
+  - Prompt: “Len, restrict [User] edits to [File_Name].txt?”
+  - Status: Active
+  - Tags: [#Onboarding, #Access]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures chat learnings and corrections
+  - Prompt: “Len, log learning/correction [Description] to task snapshot file? Move to Apex_Insights_v2.9.txt (AIS)?”
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement]
 
 [Instructions]
-[AOFL_Specific]
-- Update Apex_Operating_Files_List.txt with new files, dependencies, and GitHub raw links, validating against Apex_Files_Template.txt per VAL001.
-- Use British English (e.g., “organise”, “summarise”), per FMT007.
-- Apply FMT008: CamelCase (excluding joining words), blank lines above headings/lists and between sections, no blank line before Description, full stops.
-- Use non-versioned file references (e.g., Apex_Operating_Files_List.txt) except in [Change_Log], per FMT015.
-- Prompt for confirmation before outputting updates, per CHAT014.
-- For GitHub integration, list raw links in [Git_Tracked_Files] for latest/main and stable tags.
+Description: Guides Grok in maintaining Apex_Master_File_List.txt (AMFL) and supporting Apex system operations
+
+[AMFL_Specific]
+- At session start, fetch [Apex_Core_Session_Files] [Apex_Master_File_List.txt (AMFL), Apex_Session_Analysis_Prompt.txt (ASAP), Apex_Files_Template.txt (AFT), Apex_Overview.txt (AO), Apex_Hub.txt (AH), Apex_Tasks_Snapshot.txt (ATS)] from GitHub (e.g., https://raw.githubusercontent.com/yourusername/Apex/main/System/[File_Name].txt). List versions and sizes (e.g., AMFL_v6.14.txt, ~24 KB, 10 sections). Prompt: “Len, fetching core files from GitHub: [List_URLs]. Confirm or provide updated URLs?” If fetch fails, prompt: “Len, GitHub access failed for [File_Name].txt. Upload to workspace?”
+- Load Apex_Insights.txt (AIS) for learning integration (PRJ010) and Rule_Catalogue.txt (RC) for rule updates (CHAT018), per CHAT027.
+- Validate Apex_Master_File_List.txt (AMFL) against Apex_Files_Template.txt (AFT), verifying Section_Count: 10, per VAL001.
+- Perform session-start audit per Apex_Audit_Process.txt (AAP), logging to Grok_Apex_Report.txt (GAR) per CHAT025.
+- Use non-versioned references (e.g., Apex_Files_Template.txt (AFT)) in [Instructions], [Session_Prompts], except in [Change_Log], per FMT015.
+- Use British English, per FMT007.
+- Apply FMT008: CamelCase, blank lines, full stops.
+- Log actions to Apex_Tasks_Snapshot.txt (ATS), per CHAT006.
+- Propose new CHAT rules (e.g., CHAT028), per CHAT018.
+
 [Universal]
-- Validate against Apex_Files_Template subsections, per VAL001.
-- Enforce formatting via Formatting_Rules and self-healing via Self_Healing_Rules.
-- Maintain readability: one blank line before sections/subsections, no arbitrary changes per ONB003.
+- Validate against Apex_Files_Template.txt (AFT), per VAL001.
+- Enforce formatting (FMT001–FMT015) and self-healing (SHL001–SHL005).
+- Maintain readability: one blank line before sections/subsections, hyphenated lists, 2-space indentation for lists, 4-space for metadata.
+- Do not remove content unless instructed by Len, per SHL003.
+- Save master files with versioned names (e.g., Apex_Master_File_List_v6.14.txt (AMFL)), retain prior master as LKG (e.g., v6.12).
 
-[Apex_Core_Session_Files]
-Description: Lists always-shared core files for session start, priority ordered
-COUNT: 6 files
-1. File: Apex_Operating_Files_List.txt (AOFL), Priority: 1, Role: Indexes core files, Tag: #Masters
-2. File: Apex_Session_Analysis_Prompt.txt (ASAP), Priority: 2, Role: Guides session analysis, Tag: #Session_Management
-3. File: Apex_Files_Template.txt (AFT), Priority: 3, Role: Defines file standards, Tag: #Masters
-4. File: Apex_Overview.txt (AO), Priority: 4, Role: Provides system overview, Tag: #Masters
-5. File: Apex_Hub.txt (AH), Priority: 5, Role: Central navigation, Tag: #Masters
-6. File: Apex_Tasks_Snapshot.txt (ATS), Priority: 6, Role: Tracks system tasks, Tag: #Task_Management
-
-[Apex_Supplementary_Files]
-Description: Lists always-available supplementary files, loaded on-demand per CHAT027
-COUNT: 6 files
-1. File: Apex_Insights.txt (AIS), Role: Captures system learnings, Tag: #Insights
-2. File: Rule_Catalogue.txt (RC), Role: Lists all rules, Tag: #Masters
-3. File: Tag_Catalogue.txt (TC), Role: Standardises tags, Tag: #Masters
-4. File: Apex_Ideas_Roadmap.txt (AIR), Role: Tracks ideas and roadmap, Tag: #Roadmap
-5. File: Apex_Analogies_Metaphors.txt (AAM), Role: Captures analogies and metaphors, Tag: #Creativity
-6. File: Apex_Audit_Process.txt (AAP), Role: Defines audit process, Tag: #Auditing
-
-[Project_Hubs]
-Description: Lists project-specific hub files for navigation
-COUNT: 7 hubs
-1. Project: Apex_System
-   - Path: Apex/System
-   - Hub: Apex_Hub.txt
-   - Status: Active
-   - Tags: [#Apex_System]
-2. Project: Len_Writing
-   - Path: Apex/Projects/Len_Writing
-   - Hub: Len_Writing_Hub.txt
-   - Status: Active
-   - Tags: [#Writing]
-3. Project: Video_Games
-   - Path: Apex/Projects/Video_Games
-   - Hub: Video_Game_Hub.txt
-   - Status: Active
-   - Tags: [#Video_Games]
-4. Project: Home_Household
-   - Path: Apex/Projects/Home_Household
-   - Hub: Home_Household_Hub.txt
-   - Status: Active
-   - Tags: [#Home_Household]
-5. Project: Websites
-   - Path: Apex/Projects/Websites
-   - Hub: Websites_Hub.txt
-   - Status: Active
-   - Tags: [#Websites]
-6. Project: Deep_Sea_NN_Wars
-   - Path: Apex/Projects/Video_Games/Deep_Sea_NN_Wars
-   - Hub: Deep_Sea_NN_Wars_Hub.txt
-   - Status: Active
-   - Tags: [#Video_Games]
-7. Project: Futures_Present_Past
-   - Path: Apex/Projects/Video_Games/Futures_Present_Past
-   - Hub: Futures_Present_Past_Hub.txt
-   - Status: Active
-   - Tags: [#Video_Games]
-
-[Git_Tracked_Files]
-Description: Lists raw GitHub links for latest/main and stable tags of tracked masters
-COUNT: 6 files
-1. File: Apex_Operating_Files_List.txt
-   - Latest: https://raw.githubusercontent.com/LennyBook/Apex/main/Apex/System/Masters/Apex_Operating_Files_List.txt
-   - Stable: https://raw.githubusercontent.com/LennyBook/Apex/stable-v1.0/Apex/System/Masters/Apex_Operating_Files_List.txt
-2. File: Apex_Tasks_Snapshot.txt
-   - Latest: https://raw.githubusercontent.com/LennyBook/Apex/main/Apex/System/Masters/Apex_Tasks_Snapshot.txt
-   - Stable: https://raw.githubusercontent.com/LennyBook/Apex/stable-v2.17/Apex/System/Masters/Apex_Tasks_Snapshot.txt
-3. File: Apex_Files_Template.txt
-   - Latest: https://raw.githubusercontent.com/LennyBook/Apex/main/Apex/System/Masters/Apex_Files_Template.txt
-   - Stable: https://raw.githubusercontent.com/LennyBook/Apex/stable-v3.8/Apex/System/Masters/Apex_Files_Template.txt
-4. File: Apex_Hub.txt
-   - Latest: https://raw.githubusercontent.com/LennyBook/Apex/main/Apex/System/Masters/Apex_Hub.txt
-   - Stable: https://raw.githubusercontent.com/LennyBook/Apex/stable-v1.0/Apex/System/Masters/Apex_Hub.txt
-5. File: Apex_Overview.txt
-   - Latest: https://raw.githubusercontent.com/LennyBook/Apex/main/Apex/System/Masters/Apex_Overview.txt
-   - Stable: https://raw.githubusercontent.com/LennyBook/Apex/stable-v5.8/Apex/System/Masters/Apex_Overview.txt
-6. File: Apex_Session_Analysis_Prompt.txt
-   - Latest: https://raw.githubusercontent.com/LennyBook/Apex/main/Apex/System/Masters/Apex_Session_Analysis_Prompt.txt
-   - Stable: https://raw.githubusercontent.com/LennyBook/Apex/stable-v1.5/Apex/System/Masters/Apex_Session_Analysis_Prompt.txt
+[Overrides_Exceptions]
+Description: Specifies Exceptions to AMFL Standards
+- Apex_Master_File_List.txt (AMFL) validates itself only for Section_Count: 10 and FMT001–FMT015, per VAL001.
+- Apex in setup phase from 29-May-2025, ongoing.
 
 [Validation_Counts]
-Description: Tracks counts for AOFL validation
+Description: Tracks Counts for AMFL Validation
 COUNT:
-- Dependencies: 8
-- File_Control_Rules: 12
-- Instructions_Items: 12
-- Apex_Core_Session_Files_Items: 6
-- Apex_Supplementary_Files_Items: 6
-- Project_Hubs_Items: 7
-- Git_Tracked_Files_Items: 6
-- Change_Log_Entries: 1
+- File_Control_Subsections: 6
+- Chat_Rules_Entries: 26
+- Change_Log_Entries: Up to 20
+- Apex_Core_Session_Files: 6
+- Apex_Supplementary_Files_Total: 14
+- Rules_And_Insights: 3
+- Tools: 2
+- Manuals: 2
+- Project_Hubs: 5
+- Additional_Resources: 3
+- Apex_Projects: 8
+
+[Apex_Master_File_List_Guide]
+Description: Outlines AMFL’s Role in Apex System Operations
+
+[Overview]
+- Apex_Master_File_List.txt (AMFL) indexes core and project-specific files, supporting Len’s projects and future users (e.g., Jana).
+- Defines [Apex_Core_Session_Files] (loaded at session start) and [Apex_Supplementary_Files] (loaded as needed) from Apex system workspace or GitHub.
+- Ensures modularity and scalability, providing a single reference for navigation and resource access.
+
+[Purpose_And_Functionality]
+- Indexes core files and hubs to operate Apex and initialise Grok sessions.
+- Supports project management via hubs, per CHAT001.
+- Ensures master file integrity, per SHL001, SHL004.
+
+[Scope_And_Limitations]
+- Covers core files and hubs, not all Apex files.
+- Limited by manual validation until automation implemented.
+
+[Role_Clarification]
+- Apex_Master_File_List.txt (AMFL) indexes files for session and project management, complementing Apex_Overview.txt (AO) for system overview.
+
+[Apex_Core_Session_Files]
+Description: Files loaded from Apex system workspace or GitHub at session start
+COUNT: 6
+1. File: Apex_Master_File_List_v6.14.txt (AMFL)
+   - Role: Indexes all files
+   - Tags: [#Masters, #File_Management]
+   - Status: Critical
+   - Priority: 1
+2. File: Apex_Session_Analysis_Prompt_v1.3.txt (ASAP)
+   - Role: Guides session-start file analysis
+   - Tags: [#Session_Management, #Collaboration]
+   - Status: Critical
+   - Priority: 2
+3. File: Apex_Files_Template_v3.8.txt (AFT)
+   - Role: Defines file standards
+   - Tags: [#Masters, #Template]
+   - Status: Critical
+   - Priority: 3
+4. File: Apex_Overview_v5.8.txt (AO)
+   - Role: Provides system overview
+   - Tags: [#Masters, #Overview]
+   - Status: Critical
+   - Priority: 4
+5. File: Apex_Hub_v1.0.txt (AH)
+   - Role: Central navigation
+   - Tags: [#Masters, #Navigation]
+   - Status: Critical
+   - Priority: 5
+6. File: Apex_Tasks_Snapshot_v2.17.txt (ATS)
+   - Role: Tracks system tasks
+   - Tags: [#Task_Management]
+   - Status: Active
+   - Priority: 6
+
+[Apex_Supplementary_Files]
+Description: Files loaded from Apex system workspace or GitHub as needed, per CHAT021
+COUNT: 14
+
+[Rules_And_Insights]
+COUNT: 3
+1. File: Rule_Catalogue_v1.9.txt (RC)
+   - Role: Stores rules for creation/updates
+   - Tags: [#Rules_Management]
+   - Status: Active
+   - Priority: 1
+2. File: Apex_Insights_v2.9.txt (AIS)
+   - Role: Archives learnings
+   - Tags: [#Insights]
+   - Status: Active
+   - Priority: 2
+3. File: Apex_Analogies_Metaphors_v2.4.txt (AAM)
+   - Role: Stores analogies and metaphors
+   - Tags: [#Insights]
+   - Status: Active
+   - Priority: 3
+
+[Tools]
+COUNT: 2
+1. File: Multi_Tool_v1.0.py (MT)
+   - Role: Parsing utility
+   - Tags: [#Tools]
+   - Status: Optional
+   - Priority: 1
+2. File: Flask_UI_v1.0.py (FUI)
+   - Role: UI development tool
+   - Tags: [#Tools]
+   - Status: Optional
+   - Priority: 2
+
+[Manuals]
+COUNT: 2
+1. File: Apex_User_Manual_v1.0.txt (AUM)
+   - Role: Operational guidance
+   - Tags: [#Manuals]
+   - Status: Proposed
+   - Priority: 1
+2. File: Apex_User_Guide_v1.0.txt (AUG)
+   - Role: User workflows
+   - Tags: [#Manuals]
+   - Status: Proposed
+   - Priority: 2
+
+[Project_Hubs]
+COUNT: 5
+1. File: Len_Master_Hub_v1.0.txt (LMH)
+   - Role: Indexes all Len’s project hubs
+   - Tags: [#Project_Hubs]
+   - Status: Active
+   - Priority: 1
+2. File: Apex_Hub_v1.0.txt (AH)
+   - Role: Manages Apex_System project
+   - Tags: [#Apex_System]
+   - Status: Active
+   - Priority: 2
+3. File: Len_Writing_Hub_v1.0.txt (LWH)
+   - Role: Manages writing projects
+   - Tags: [#Writing]
+   - Status: Active
+   - Priority: 3
+4. File: Video_Game_Hub_v1.0.txt (VGH)
+   - Role: Manages video game projects
+   - Tags: [#Game_Development]
+   - Status: Active
+   - Priority: 4
+5. File: Home_Household_Hub_v1.0.txt (HHH)
+   - Role: Manages household tasks
+   - Tags: [#Home_Household]
+   - Status: Active
+   - Priority: 5
+
+[Additional_Resources]
+COUNT: 3
+1. File: User_File_Template_v1.0.txt (UFT)
+   - Role: Guides user file creation
+   - Tags: [#Template]
+   - Status: Active
+   - Priority: 1
+2. File: Tag_Catalogue_v6.3.txt (TC)
+   - Role: Manages tags
+   - Tags: [#Rules_Management]
+   - Status: Active
+   - Priority: 2
+3. File: Apex_Ideas_Roadmap_v1.0.txt (AIR)
+   - Role: Stores system ideas
+   - Tags: [#Planning]
+   - Status: Active
+   - Priority: 3
+
+[Apex_Projects]
+Description: Active and inactive projects
+COUNT: 8
+1. Project: Apex_System
+   - Path: Apex/System
+   - Hub: Apex_Hub_v1.0.txt (AH)
+   - Status: Active
+   - Tags: [#Apex_System]
+2. Project: Video_Games/Deep_Sea_NN_Wars
+   - Path: Apex/Projects/Video_Games/Deep_Sea_NN_Wars
+   - Hub: Deep_Sea_NN_Wars_Hub_v1.0.txt (DSNNWH)
+   - Status: Active
+   - Tags: [#Game_Development]
+3. Project: Video_Games/Futures_Present_Past
+   - Path: Apex/Projects/Video_Games/Futures_Present_Past
+   - Hub: Video_Game_Hub_v1.0.txt (VGH)
+   - Status: Active
+   - Tags: [#Game_Development]
+4. Project: Writing
+   - Path: Apex/Projects/Writing
+   - Hub: Len_Writing_Hub_v1.0.txt (LWH)
+   - Status: Active
+   - Tags: [#Writing]
+5. Project: Home_Household
+   - Path: Apex/Projects/Home_Household
+   - Hub: Home_Household_Hub_v1.0.txt (HHH)
+   - Status: Active
+   - Tags: [#Home_Household]
+6. Project: Personal
+   - Path: Apex/Projects/Personal
+   - Hub: None
+   - Status: Inactive
+   - Tags: [#Personal]
+7. Project: Consulting
+   - Path: Apex/Projects/Consulting
+   - Hub: None
+   - Status: Inactive
+   - Tags: [#Consulting]
+8. Project: Finances
+   - Path: Apex/Projects/Finances
+   - Hub: None
+   - Status: Inactive
+   - Tags: [#Finances]
+
+[Session_Prompts]
+Description: Defines Prompts for Chat Sessions
+- Iterative_Discussion: “Discuss changes for [File_Name].txt ([Abbreviation]) iteratively, per Apex_Files_Template.txt (AFT).”
+- Project_File_Load: “Len, load [File_Name]_v[Version].txt ([Abbreviation]) for [Project]?”
 
 [Change_Log]
-Description: Tracks significant updates to AOFL, up to 20 entries, per FMT009
-COUNT: 1 entry
-- 16-Aug-2025: Updated to v1.1: Renamed from AMFL, added [Git_Tracked_Files] with raw GitHub links for latest/stable, updated [Purpose] for GitHub sharing, validated per Apex_Files_Template.txt, per CHAT017.
+Description: Tracks significant updates to AMFL, up to 20 entries, per FMT009
+COUNT: 18 entries
+- 22-Jun-2025: Retired Apex_Beta_Plan.txt (ABP), relocated [One_Off_Tasks].
+- 22-Jun-2025: Added Len_Writing_Hub_v1.0.txt (LWH) to [Core_Session_Files].
+- 22-Jun-2025: Replaced Grok_Apex_Primer.txt (GAP) with Apex_Overview_v5.2.txt (AO).
+- 24-Jun-2025: Updated to v4.5: Added full stops, applied FMT008, added CHAT025.
+- 25-Jun-2025: Updated to v4.8: Aligned with Apex_Files_Template_v3.0.txt (AFT).
+- 28-Jun-2025: Updated to v5.1: Moved Apex_Hub_v1.0.txt (AH) to [Core_Session_Files].
+- 29-Jun-2025: Updated to v5.3: Removed Rule_Audit.txt (RA), added Rule_Catalogue_v1.0.txt (RC).
+- 12-Jul-2025: Updated to v6.2: Updated chat rule IDs to align with RC v1.6.
+- 21-Jul-2025: Updated to v6.5: Updated dependencies, corrected CHAT034 to CHAT017.
+- 29-Jul-2025: Updated to v6.7: Updated dependencies to AFT_v3.4.txt, AO_v5.3.txt, logged to ATS.
+- 30-Jul-2025: Updated to v6.8: Moved AIS, RC to [Apex_Supplementary_Files], added VGH, HRH, ITCH to [Apex_Projects], removed [Writing_Resources], added CHAT026, CHAT027, ONB004, applied hybrid referencing, logged INS022 to ATS.
+- 30-Jul-2025: Updated to v6.9: Added Apex_Session_Analysis_Prompt_v1.0.txt (ASAP) to [Apex_Supplementary_Files] [Additional_Resources], updated ATS to v2.3, logged task ATS032 to ATS, per CHAT017.
+- 30-Jul-2025: Updated to v6.10: Moved Apex_Session_Analysis_Prompt_v1.1.txt (ASAP) to [Apex_Core_Session_Files] as file 2, priority 2, updated ATS to v2.4, updated [Validation_Counts], used non-versioned references in [Instructions], logged task ATS034 to ATS, per CHAT017, CHAT026.
+- 31-Jul-2025: Updated to v6.11: Updated [Dependencies] to Apex_Audit_Process_v1.2.txt (AAP), updated [Apex_Core_Session_Files] to ASAP_v1.3.txt, logged task ATS040 to ATS, per CHAT017, resolves GAR001.
+- 02-Aug-2025: Updated to v6.12: Updated [Dependencies] to ATS_v2.8.txt, renamed Home_Renovation_Hub_v1.0.txt to Home_Household_Hub_v1.0.txt, removed IT_Consulting_Hub_v1.0.txt, added Len_Master_Hub_v1.0.txt and Apex_Hub_v1.0.txt to [Project_Hubs], updated [Apex_Projects] for nested structure and inactive projects, logged task ATS048 to ATS, per CHAT017.
+- 03-Aug-2025: Updated to v6.13: Updated [Dependencies] to ATS_v2.17.txt, AIS_v2.9.txt, RC_v1.9.txt, added Len_X_Reply_Log_v1.8.txt (ATS104) to [Project_Hubs], logged task ATS058 to ATS, per CHAT017.
+- 03-Aug-2025: Updated to v6.14: Updated [Dependencies] to AFT_v3.8.txt, AO_v5.8.txt, added Len_Worldview_2025_v3.6.txt (ATS105) to [Project_Hubs], logged task ATS059 to ATS, per CHAT017.
 
 [Content_End]
