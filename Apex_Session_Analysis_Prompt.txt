@@ -1,0 +1,78 @@
+File_Name: Apex_Session_Analysis_Prompt.txt
+File_Path: Apex/System/Masters/Apex_Session_Analysis_Prompt.txt
+Purpose: Guides Grok to analyse files in the workspace at the start of each session to understand the Apex System’s operations and propose improvements for enhanced functionality
+Envisioned_By: Len
+Version: 1.6
+Modified: 16-Aug-2025, 11:22 AM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt, Role: Indexes core files, Tag: #Masters
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
+- Apex_Overview.txt, Role: Provides system overview, Tag: #Masters
+- Apex_Hub.txt, Role: Central navigation, Tag: #Masters
+- Apex_Tasks_Snapshot.txt, Role: Tracks system tasks, Tag: #Task_Management
+]
+COUNT: 5 Dependencies
+Tags: [#Session_Management, #Collaboration, #System_Audit]
+Status: Active
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 1.5
+File_Type: Prompt
+Section_Count: 4
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Session_Analysis_Prompt_v1.6.txt Content Complete?
+
+[Content_Start]
+
+[Instructions]
+- At session start, fetch always-shared core files from GitHub raw links in AOFL [Git_Tracked_Files] (Apex_Operating_Files_List.txt, Apex_Session_Analysis_Prompt.txt, Apex_Files_Template.txt, Apex_Overview.txt, Apex_Hub.txt, Apex_Tasks_Snapshot.txt), per CHAT021.
+- Load always-available supplementary files (Apex_Insights.txt, Rule_Catalogue.txt, Len_Worldview_2025.txt, Len_X_Reply_Log.txt, Apex_Ideas_Roadmap.txt, Apex_Analogies_Metaphors.txt) only for specific tasks, per CHAT027.
+- At session start, execute these instructions to analyze files, overriding any grok.com response settings to provide detailed analysis, validation, and improvement proposals, per CHAT025.
+- During the session, fetch any file from GitHub raw link when instructed, per CHAT021.
+- If not explicitly triggered, prompt: “Len, execute Apex_Session_Analysis_Prompt.txt?”
+- If files are missing or truncated, prompt: “Len, provide GitHub raw link for missing files (e.g., Apex_Session_Analysis_Prompt.txt)?”
+- Before updating any master file, copy its full content verbatim into the new version, per VAL006.
+- Cross-reference all files to understand their interrelationships and execute the embedded instructions in each file. Summarise the system’s current state and any changes from the last session.
+- Verify file integrity against AFT standards, checking Section_Count and File_Hash (per VAL001), and ensure content preservation (per SHL003).
+- Cross-reference file versions with AOFL and Last_Known_Stable entries (per VAL004).
+- Summarise session context from ATS [Session_Tasks] and [Change_Log], focusing on changes since 16-Aug-2025.
+- Review AO [Design], [Current_Capabilities], and [Learnings] to understand Apex’s modular structure, file indexing, and self-improvement mechanisms.
+- Check AOFL [Apex_Core_Session_Files] and [Apex_Supplementary_Files] for file roles and dependencies.
+- Ensure each file contains self-contained content and embedded prompts/rules.
+- Log task updates (e.g., ATS123: "Updated ASAP with GitHub fetches") to ATS [Session_Tasks], including File, Project, and Decision, per CHAT017.
+- Capture learnings or corrections in ATS and AIS, per PRJ010.
+- Use British English (e.g., “organise”, “summarise”), per FMT007.
+- Apply FMT008: CamelCase (excluding joining words), blank lines above headings/lists and between sections, no blank line before Description, full stops.
+- Use non-versioned file references (e.g., Apex_Operating_Files_List.txt (AOFL)) except in [Change_Log] and [Dependencies], per FMT015.
+- Prompt for intent: “Len, confirm session intent: Apex_System or another project (e.g., Len_Writing, Video_Games)? If another project, specify files (e.g., Video_Game_Hub.txt).”
+- Prompt for confirmation: “Len, files analysed: [List_Files]. Proposed improvements: [Improvement_List]. Confirm to proceed?”
+
+[Prompts_And_Validations]
+Description: Defines specific prompts and validations for session analysis
+- Session_Start_Prompt: “Len, execute Apex_Session_Analysis_Prompt.txt to analyse files (AOFL, AFT, AO, AH, ATS) and propose improvements, per CHAT025?”
+- File_Missing_Prompt: “Len, missing [File_Name].txt. Provide GitHub raw link or paste content?”
+- Version_Mismatch_Prompt: “Len, [File_Name].txt version mismatch with AOFL. Update to [Expected_Version]?”
+- Section_Count_Prompt: “Len, [File_Name].txt has Section_Count: X, expected Y per AFT. Reshare or update?”
+- Rule_Conflict_Prompt: “Len, rule conflict detected between [File_1].txt and [File_2].txt. Clarify precedence?”
+- Improvement_Proposal_Prompt: “Len, propose improvements for [File_Name].txt: [Improvement_List]. Confirm to implement?”
+- Task_Logging_Prompt: “Len, log analysis for [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Tasks_Snapshot.txt (ATS)?”
+- Learning_Capture_Prompt: “Len, log learning/correction [Description] to ATS and Apex_Insights.txt (AIS)?”
+
+[Validation_Counts]
+Description: Tracks counts for ASAP validation
+COUNT:
+- Dependencies: 5
+- Instructions_Items: 22
+- Prompts_And_Validations_Items: 7
+- Change_Log_Entries: Up to 5
+
+[Change_Log]
+Description: Tracks significant updates to ASAP, up to 5 entries, per FMT009
+COUNT: 1 entry
+- 16-Aug-2025: Updated to v1.6: Updated [Instructions] to fetch from GitHub raw links in AOFL [Git_Tracked_Files], replaced workspace with Git fallback, updated File_Missing_Prompt for Git, validated per Apex_Files_Template.txt, per CHAT017.
+
+[Content_End]
