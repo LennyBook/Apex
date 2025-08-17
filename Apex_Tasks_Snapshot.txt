@@ -1,0 +1,474 @@
+File_Name: Apex_Tasks_Snapshot.txt
+File_Path: Apex/System/Session_Files/Apex_Tasks_Snapshot.txt
+Purpose: Tracks Active, Proposed, and Repeating Tasks for Apex System, Ensuring Session Continuity
+Envisioned_By: Len
+Version: 2.19
+Modified: 17-Aug-2025, 11:55 AM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt, Role: Indexes core files, Tag: #Masters
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
+- Apex_Overview.txt, Role: Provides system context, Tag: #Masters
+- Apex_Hub.txt, Role: Central navigation, Tag: #Masters
+- Apex_Audit_Process.txt, Role: Defines audit process, Tag: #Auditing
+- Apex_Session_Analysis_Prompt.txt, Role: Guides session analysis, Tag: #Session_Management
+- Apex_Completed_Tasks_Archive.txt, Role: Archives completed tasks, Tag: #Archive
+]
+COUNT: 7 Dependencies
+Tags: [#Task_Management, #Apex_System, #Session_Management, #Self_Improvement]
+Status: Active
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 2.17
+File_Type: Snapshot
+Section_Count: 5
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Tasks_Snapshot_v2.19.txt Content Complete?
+
+[Content_Start]
+
+[File_Control]
+Description: Manages Instructions, Rules, and Tasks for Apex_Tasks_Snapshot.txt
+[File_Control_Rules]
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count and File_Hash
+  - Prompt: “Len, Apex_Tasks_Snapshot.txt truncated: X/5 sections. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- VAL002: Control_Validation_Rule
+  - Description: Ensures File_Control subsections
+  - Prompt: “Len, missing [Subsection] in Apex_Tasks_Snapshot.txt [File_Control]. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves content
+  - Prompt: “Len, content removed in Apex_Tasks_Snapshot.txt. Confirm intent?”
+  - Status: Active
+  - Tags: [#Self_Healing]
+- CHAT017: Session_Snapshot_Detail
+  - Description: Ensures task snapshot files capture live tasks, session context, and outcomes
+  - Prompt: “Len, Log [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Tasks_Snapshot.txt?”
+  - Status: Active
+  - Tags: [#Logging, #Session_Management]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures learnings for Apex_Insights.txt
+  - Prompt: “Len, log learning [Description] to Apex_Tasks_Snapshot.txt and Apex_Insights.txt?”
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement]
+- VAL005: Content_Integrity_Rule
+  - Description: Ensures all content from prior versions is preserved in new master versions
+  - Prompt: “Len, content missing in [File_Name].txt compared to v[Prior_Version]. Restore?”
+  - Status: Active
+  - Tags: [#Validation, #Self_Healing]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures versioned references in [Dependencies]/[Core_Session_Files]/[Supplementary_Files], non-versioned elsewhere
+  - Prompt: “Len, [File_Name].txt uses inconsistent reference style. Update?”
+  - Status: Active
+  - Tags: [#Formatting, #Consistency]
+- CHAT027: File_Loading_Optimization_Rule
+  - Description: Loads AIS and RC only for specific tasks
+  - Prompt: “Len, load Apex_Insights.txt or Rule_Catalogue.txt for [Task_ID]?”
+  - Status: Active
+  - Tags: [#Collaboration, #Efficiency]
+- ONB004: User_Access_Rule
+  - Description: Restricts non-owner edits to Apex core files
+  - Prompt: “Len, restrict [User] edits to [File_Name].txt?”
+  - Status: Active
+  - Tags: [#Onboarding, #Access]
+- VAL006: Verbatim_Copy_Rule
+  - Description: Ensures all content from the current master is copied verbatim into the new version before updates
+  - Prompt: “Len, content missing in Apex_Tasks_Snapshot.txt. Reshare?”
+  - Status: Active
+  - Tags: [#Validation]
+- CHAT027: Session_Initialization_Rule
+  - Description: Requires Len to share core master files at session start to ensure Grok uses latest versions for updates
+  - Prompt: “Len, please share core masters (Apex_Master_File_List.txt, Apex_Tasks_Snapshot.txt, Apex_Insights.txt, Apex_Files_Template.txt, Apex_Overview.txt, Rule_Catalogue.txt, Apex_Hub.txt, Tag_Catalogue.txt) to initialize session.”
+  - Status: Active
+  - Tags: [#Session_Management, #Workspace_Access]
+- CHAT028: Filename_Clarity_Rule
+  - Description: Requires Grok to use full filenames (e.g., Apex_Master_File_List.txt) in chat responses, reserving abbreviations for Len’s input
+  - Prompt: “Len, confirm usage of full filename [File_Name].txt in chat response?”
+  - Status: Active
+  - Tags: [#Session_Management, #Clarity]
+
+[Instructions]
+[ATS_Specific]
+- Validate Apex_Tasks_Snapshot.txt against Apex_Files_Template.txt, verifying Section_Count: 5 and File_Hash, per VAL001, VAL005.
+- Log all session tasks, files, projects, and decisions to [Session_Tasks], [Completed_Tasks], and [Repeating_Tasks], per CHAT017.
+- Use British English (e.g., “organise”, “summarise”), per FMT007.
+- Apply FMT008: CamelCase (excluding joining words), blank lines above headings/lists and between sections, no blank line before Description, full stops.
+- Use non-versioned file references (e.g., Apex_Tasks_Snapshot.txt) except in [Change_Log], per FMT015.
+- Prompt for confirmation before outputting updates, per CHAT014.
+[Universal]
+- Validate against Apex_Files_Template subsections, per VAL001.
+- Enforce formatting via Formatting_Rules and self-healing via Self_Healing_Rules.
+- Maintain readability: one blank line before sections/subsections, no arbitrary changes per ONB003.
+
+[Session_Tasks]
+Description: Tracks active session tasks
+COUNT: 55
+- ATS003: Update Rule_Catalogue.txt with new rules identified during session analysis, ensuring alignment with FMT008 for formatting and CHAT026 for reference consistency across all master files.
+  - File: Rule_Catalogue.txt
+  - Project: Apex_System
+  - Status: Proposed
+  - Tags: [#Rules_Management]
+- ATS007: Integrate learnings from INS023–INS030 into Apex_Insights.txt, capturing session outcomes, rule refinements, and system improvements to enhance self-improvement workflows.
+  - File: Apex_Insights.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Self_Improvement]
+- ATS008: Create project-specific task snapshot files (e.g., Writing_Tasks_Snapshot.txt) to segregate tasks by project, improving task management and focus per PRJ008.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Proposed
+  - Tags: [#Task_Management]
+- ATS009: Define new requirements for retiring Apex_Beta_Plan.txt, updating Apex_Overview.txt to reflect system evolution and current state.
+  - File: Apex_Overview.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#System_Evolution]
+- ATS010: Update Apex_Hub.txt with navigation links to all project hubs, ensuring seamless access to project-specific tasks and files.
+  - File: Apex_Hub.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Navigation]
+- ATS011: Refine PRJ010 in Apex_Tasks_Snapshot.txt to improve learning capture process, ensuring consistent logging of insights to Apex_Insights.txt.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Self_Improvement]
+- ATS013: Add ONB004 to [File_Control_Rules] in Apex_Master_File_List.txt to enforce user access restrictions for core files.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Onboarding]
+- ATS014: Update CHAT026 in Apex_Master_File_List.txt to enforce consistent non-versioned references across all files except in [Change_Log] and [Dependencies].
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Formatting]
+- ATS015: Create Apex_Completed_Tasks_Archive.txt to store completed tasks, ensuring clean task tracking and session continuity.
+  - File: Apex_Completed_Tasks_Archive.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Archive]
+- ATS017: Log all session decisions, including task statuses and file updates, to Apex_Tasks_Snapshot.txt to maintain session continuity.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Logging]
+- ATS024: Conduct weekly task review to prioritize tasks across projects, updating Apex_Tasks_Snapshot.txt with revised priorities.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Task_Management]
+- ATS025: Update Apex_Session_Analysis_Prompt.txt to include intent prompt for session initialization, improving Grok collaboration.
+  - File: Apex_Session_Analysis_Prompt.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Session_Management]
+- ATS026: Add CHAT027 to Apex_Master_File_List.txt for file loading optimization, reducing unnecessary loads of Apex_Insights.txt and Rule_Catalogue.txt.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Efficiency]
+- ATS027: Integrate hub creation process for all projects in Apex_Hub.txt, ensuring consistent navigation and task aggregation.
+  - File: Apex_Hub.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Navigation]
+- ATS028: Define always-shared and always-available files in Apex_Session_Analysis_Prompt.txt to streamline session initialization.
+  - File: Apex_Session_Analysis_Prompt.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Session_Management]
+- ATS029: Update Apex_Master_File_List.txt with new supplementary files to maintain accurate file indexing.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#File_Management]
+- ATS030: Capture learnings from INS031–INS040 in Apex_Insights.txt to document system improvements and session outcomes.
+  - File: Apex_Insights.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Self_Improvement]
+- ATS031: Implement local backup strategy for all master files, ensuring data preservation and recovery options.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Self_Healing]
+- ATS036: Merge project-specific task snapshot files into Apex_Tasks_Snapshot.txt to consolidate task tracking.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Task_Management]
+- ATS037: Update Apex_Insights.txt with learnings from INS041–INS050 to enhance system self-improvement processes.
+  - File: Apex_Insights.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Self_Improvement]
+- ATS038: Refine PRJ011 in Apex_Hub.txt to establish rules for hub creation, ensuring scalability and navigation efficiency.
+  - File: Apex_Hub.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Navigation]
+- ATS039: Add GAR002 to Grok_Apex_Report.txt to document audit results, improving system transparency.
+  - File: Grok_Apex_Report.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#System_Audit]
+- ATS040: Update Dependencies in Apex_Overview.txt to reference Apex_Master_File_List_v6.10.txt, ensuring consistency.
+  - File: Apex_Overview.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Overview]
+- ATS041: Resolve GAR001 in Rule_Catalogue.txt to address rule audit findings, ensuring compliance with system standards.
+  - File: Rule_Catalogue.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Rules_Management]
+- ATS042: Resolve GAR003 in Apex_Master_File_List.txt to fix version mismatches across master files.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Validation]
+- ATS043: Implement Git-based patching for Deep_Sea_NN_Wars, updating Deep_Sea_NN_Wars_Hub.txt with patch details.
+  - File: Deep_Sea_NN_Wars_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS044: Synchronize dependencies across all master files in Apex_Master_File_List.txt to ensure consistency.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Consistency]
+- ATS045: Update Apex_Audit_Process.txt with new audit procedures to enhance system validation.
+  - File: Apex_Audit_Process.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Auditing]
+- ATS046: Organize Projects folder structure in Apex_Hub.txt, ensuring clear navigation and file access.
+  - File: Apex_Hub.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Navigation]
+- ATS047: Implement Flask UI in Flask_UI.py to provide real-time task management and navigation for Apex.
+  - File: Flask_UI.py
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Tools]
+- ATS049: Confirm grok.com usage quotas in Apex_Overview.txt to ensure compliance with access limits.
+  - File: Apex_Overview.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Session_Management]
+- ATS050: Create indexing script in Indexing_Script.py to automate file indexing for Apex_System.
+  - File: Indexing_Script.py
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#File_Management]
+- ATS051: Implement task tracking for Home_Household in Home_Household_Hub.txt, ensuring comprehensive task management.
+  - File: Home_Household_Hub.txt
+  - Project: Home_Household
+  - Status: Active
+  - Tags: [#Home_Household]
+- ATS052: Plan GitHub synchronization for Apex in Apex_Tasks_Snapshot.txt, ensuring seamless file access.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#File_Management]
+- ATS053: Develop timeline for Apex setup in Apex_Ideas_Roadmap.txt, outlining short-term and long-term goals.
+  - File: Apex_Ideas_Roadmap.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Roadmap]
+- ATS055: Create project-specific task snapshot for Len_Writing in Len_Writing_Tasks_Snapshot.txt to manage writing tasks.
+  - File: Len_Writing_Tasks_Snapshot.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Writing]
+- ATS056: Create project-specific task snapshot for Video_Games in Video_Games_Tasks_Snapshot.txt to manage game development tasks.
+  - File: Video_Games_Tasks_Snapshot.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS057: Create project-specific task snapshot for Home_Household in Home_Household_Tasks_Snapshot.txt to manage household tasks.
+  - File: Home_Household_Tasks_Snapshot.txt
+  - Project: Home_Household
+  - Status: Active
+  - Tags: [#Home_Household]
+- ATS058: Create project-specific task snapshot for Websites in Websites_Tasks_Snapshot.txt to manage website tasks.
+  - File: Websites_Tasks_Snapshot.txt
+  - Project: Websites
+  - Status: Active
+  - Tags: [#Websites]
+- ATS060: Update Apex_Analogies_Metaphors.txt with new analogies and metaphors to enhance creative workflows.
+  - File: Apex_Analogies_Metaphors.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Creativity]
+- ATS061: Analyze writing style for Len_Writing in Len_Writing_Hub.txt, ensuring consistency with Sydney North Shore tone.
+  - File: Len_Writing_Hub.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Writing]
+- ATS062: Develop daily task list for session management in Apex_Tasks_Snapshot.txt, prioritizing high-impact tasks.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Task_Management]
+- ATS063: Package game assets for Deep_Sea_NN_Wars in Deep_Sea_NN_Wars_Hub.txt, ensuring deployable builds.
+  - File: Deep_Sea_NN_Wars_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS064: Analyze Apex_Ideas_Roadmap.txt to identify priorities and milestones for Apex development.
+  - File: Apex_Ideas_Roadmap.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Roadmap]
+- ATS066: Research cutscene implementation for Deep_Sea_NN_Wars in Deep_Sea_NN_Wars_Hub.txt, enhancing narrative delivery.
+  - File: Deep_Sea_NN_Wars_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS067: Design modular code architecture for games in Video_Game_Hub.txt, improving maintainability and scalability.
+  - File: Video_Game_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS068: Add cutscene engine to Deep_Sea_NN_Wars in Deep_Sea_NN_Wars_Hub.txt, integrating with game mechanics.
+  - File: Deep_Sea_NN_Wars_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS069: Update game narrative for Futures_Present_Past in Futures_Present_Past_Hub.txt, refining story arcs.
+  - File: Futures_Present_Past_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS070: Design modular AI for Deep_Sea_NN_Wars in Deep_Sea_NN_Wars_Hub.txt, enhancing gameplay intelligence.
+  - File: Deep_Sea_NN_Wars_Hub.txt
+  - Project: Video_Games
+  - Status: Active
+  - Tags: [#Video_Games]
+- ATS071: Define always-shared and always-available files for sessions in Apex_Session_Analysis_Prompt.txt, optimizing Grok access.
+  - File: Apex_Session_Analysis_Prompt.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Session_Management]
+- ATS072: Implement daily task reminders in Apex_Tasks_Snapshot.txt to maintain focus and productivity.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Task_Management]
+- ATS073: Develop X strategy for social media in Online_Strategy_2025.txt, focusing on engagement and tone.
+  - File: Online_Strategy_2025.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Online_Strategy]
+- ATS074: Create social media hub in Social_Media_Hub.txt to centralize social media tasks and strategies.
+  - File: Social_Media_Hub.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Online_Strategy]
+- ATS075: Establish article writing process in Len_Writing_Hub.txt, integrating tone and outline guidelines.
+  - File: Len_Writing_Hub.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Writing]
+- ATS076: Setup @PatriotBabeUSA account in PatriotBabeUSA_Tasks_Snapshot.txt for social media experiments.
+  - File: PatriotBabeUSA_Tasks_Snapshot.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Social_Experiment]
+- ATS077: Integrate news summary process for X in Online_Strategy_2025.txt, enhancing content relevance.
+  - File: Online_Strategy_2025.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Writing]
+- ATS102: Set draft status for articles in Len_Writing_Hub.txt, tracking progress and revisions.
+  - File: Len_Writing_Hub.txt
+  - Project: Len_Writing
+  - Status: Active
+  - Tags: [#Writing]
+- ATS103: Implement task batching and patching in Apex_Tasks_Snapshot.txt to optimize task execution.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Task_Management]
+- ATS106: Update Apex_Files_Template.txt to v3.8 with FMT017, FMT018 for enhanced formatting standards.
+  - File: Apex_Files_Template.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#Formatting]
+- ATS124: Renamed Masters folder to Session_Files in Apex file structure, updated paths in Apex_Operating_Files_List.txt and all dependent files to ensure consistency and accurate file referencing.
+  - File: Apex_Operating_Files_List.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#File_Management]
+- ATS125: Refined .gitignore to exclude Writing subfolders (Articles, Social_Media, Songs, Books/Adult/Self_Help/Yoga_Book, Books/Children) from Git tracking, added Len_Master_Hub.txt for centralized navigation, structured project hubs and tasks for daily prioritization across Apex_System, Writing, Video_Games, Home_Household, and Websites.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#File_Management]
+- ATS126: Integrated updates to Apex_PRD.txt v1.2 to include folder structure changes (Session_Files, 3rd_Party, In_Progress), created Apex_Git_Setup_Guide.txt to document Git setup and In_Progress workflow, added 3rd_Party and In_Progress folders to Apex/System for resource storage and WIP file management.
+  - File: Apex_PRD.txt
+  - Project: Apex_System
+  - Status: Active
+  - Tags: [#File_Management]
+
+[Repeating_Tasks]
+Description: Tracks repeating tasks for session continuity
+COUNT: 5
+- ATS012: System audit per Apex_Audit_Process.txt.
+  - File: Apex_Audit_Process.txt
+  - Project: Apex_System
+  - Status: Repeating
+  - Tags: [#Auditing]
+- ATS018: Master file merging process.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Repeating
+  - Tags: [#File_Management]
+- ATS024: Weekly task review for prioritization.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Repeating
+  - Tags: [#Task_Management]
+- ATS033: Backup verification.
+  - File: Apex_Tasks_Snapshot.txt
+  - Project: Apex_System
+  - Status: Repeating
+  - Tags: [#Self_Healing]
+- ATS044: Dependency sync.
+  - File: Apex_Master_File_List.txt
+  - Project: Apex_System
+  - Status: Repeating
+  - Tags: [#Consistency]
+
+[Change_Log]
+Description: Tracks significant updates to Apex_Tasks_Snapshot.txt, up to 20 entries, per FMT009
+COUNT: 19 entries
+- 20-Jul-2025: Updated to v1.9: Added ATS019 to restore AMFL content, refined ATS018 as repeating task for master file merging, added VAL005 to [File_Control_Rules], per CHAT017, SHL003.
+- 20-Jul-2025: Updated to v2.0: Completed ATS019 (restored AMFL content, added Len_Master_Hub.txt, removed Canva_AI_X_Banner_Prompt.txt, updated [Instructions] [AMFL_Specific], added VAL006), completed PRJ-WRT-018 (created Len_Master_Hub.txt), updated Dependencies to Apex_Master_File_List.txt, validated per Apex_Files_Template.txt, per CHAT017, SHL003.
+- 21-Jul-2025: Updated to v2.1: Updated Dependencies to Apex_Master_File_List.txt, Apex_Files_Template.txt, corrected CHAT034 to CHAT017 in [File_Control_Rules], added ATS020 for system-wide master file update, per VAL005, CHAT017.
+- 30-Jul-2025: Updated to v2.2: Updated Dependencies to Apex_Master_File_List.txt, Apex_Files_Template.txt, added CHAT026, CHAT027, ONB004 to [File_Control_Rules], completed ATS021–ATS023 (AMFL updates, AFT updates, AO updates), added ATS021–ATS031 for INS022, hub creation, task snapshots, new requirements, and project task definitions, validated per Apex_Files_Template.txt, per CHAT017, SHL003.
+- 30-Jul-2025: Updated to v2.3: Created and indexed Apex_Session_Analysis_Prompt.txt in Apex_Master_File_List.txt [Apex_Supplementary_Files] [Additional_Resources], added ATS032 to [Session_Tasks] and [Completed_Tasks], updated Dependencies to Apex_Master_File_List.txt, validated per Apex_Files_Template.txt, per CHAT017.
+- 30-Jul-2025: Updated to v2.4: Set minimal custom instruction “Start session with manual prompt,” updated Apex_Session_Analysis_Prompt.txt to override grok.com settings, add intent prompt, cross-reference files, execute embedded instructions, and summarise system state, added ATS034 to [Session_Tasks] and [Completed_Tasks], updated Dependencies to Apex_Master_File_List.txt, validated per Apex_Files_Template.txt, per CHAT017, CHAT026.
+- 30-Jul-2025: Updated to v2.5: Added ATS035 to [Session_Tasks] and [Completed_Tasks] to implement local backup strategy, uploading latest masters to workspace, verbatim copying for updates, confirmed Grok can access workspace files anytime during session, updated ATS012 to reference Apex_Audit_Process.txt.
+- 30-Jul-2025: Updated to v2.6: Added ATS043 for Git-based patching for Deep_Sea_NN_Wars, updated Apex_Master_File_List.txt, validated per Apex_Files_Template.txt, per CHAT017.
+- 01-Aug-2025: Updated to v2.7: Added ATS046 for Projects folder organisation, ATS047 for Flask UI implementation, ATS048 for updating Apex_Master_File_List.txt with hub additions, completed ATS048, validated per Apex_Files_Template.txt, per CHAT017.
+- 01-Aug-2025: Updated to v2.8: Added ATS049 for grok.com usage confirmation, ATS050 for indexing script creation, ATS051 for Home_Household task tracking, ATS052 for GitHub sync planning, ATS053 for Apex setup timeline, validated per Apex_Files_Template.txt, per CHAT017.
+- 02-Aug-2025: Updated to v2.9: Updated Dependencies to Apex_Files_Template.txt, Apex_Overview.txt, completed ATS054 for hub file creation (Len_Master_Hub.txt, Apex_Hub.txt, Deep_Sea_NN_Wars_Hub.txt, Video_Game_Hub.txt, Writing_Hub.txt, Home_Household_Hub.txt, Websites_Hub.txt), validated per Apex_Files_Template.txt, per CHAT017.
+- 02-Aug-2025: Updated to v2.10: Added ATS055–ATS058 for project-specific task snapshots (Len_Writing, Video_Games, Home_Household, Websites), ATS059 for Apex_PRD.md creation, ATS060 for Apex_Analogies_Metaphors.txt updates, ATS061 for writing style analysis, ATS062 for daily task list, validated per Apex_Files_Template.txt, per CHAT017.
+- 02-Aug-2025: Updated to v2.11: Added ATS063 for game packaging, ATS064 for Apex_Ideas_Roadmap.txt analysis, ATS065 for Apex_Session_Analysis_Prompt_v1.2.txt to v1.3.txt update, completed ATS065, validated per Apex_Files_Template.txt, per CHAT017.
+- 03-Aug-2025: Updated to v2.15: Archived completed tasks (ATS001, ATS002, ATS004, ATS005, ATS006, PRJ-WRT-001, PRJ-WRT-003A, PRJ-WRT-009, PRJ-WRT-013, PRJ-WRT-014, ATS016, ATS019, ATS020, ATS021, ATS022, ATS023, ATS032, ATS034, ATS035, ATS048, ATS054, ATS065, PRJ-WRT-015, PRJ-WRT-016, ATS098, ATS099, ATS100, ATS101, ATS104) to Apex_Completed_Tasks_Archive_v1.0.txt, added ATS102 (Draft status), ATS103 (task batching/patching), ATS104 (X post reply to @thatsKAIZEN, completed), updated Dependencies to Apex_Files_Template.txt, Apex_Insights.txt, validated per Apex_Files_Template_v3.7.txt, logged to Apex_Insights.txt (INS036).
+- 03-Aug-2025: Updated to v2.16: Added ATS105 for article outlines (“Human Nature and Exploitation,” “Racism as Tribal Instinct”) in Len_Writing_Hub_v1.0.txt, updated Post_Count to 18 in X_Post_Log_v1.8.txt, logged to Apex_Insights_v2.9.txt, per CHAT017.
+- 03-Aug-2025: Updated to v2.17: Added ATS106 for AFT v3.8 update with FMT017, FMT018, updated Dependencies to AMFL_v6.14.txt, AO_v5.8.txt, ATS_v2.16.txt, RC_v1.9.txt, AIS_v2.9.txt, moved ATS105 to [Completed_Tasks], validated per Apex_Files_Template_v3.8.txt, per CHAT017.
+- 17-Aug-2025: Updated to v2.19: Copied v2.17 verbatim per VAL006, restored extended task descriptions from v2.15 for accuracy, updated File_Path to Session_Files, fixed non-versioned dependencies per CHAT026, added ATS124 for Session_Files rename, ATS125 for .gitignore refinement, ATS126 for PRD/Git Setup Guide updates, logged INS067 (resolved truncation via raw URLs) and INS070 (restored v2.15 descriptions), preserved 55 tasks + 5 repeating, validated per Apex_Files_Template.txt, per CHAT017.
+
+[Content_End]
