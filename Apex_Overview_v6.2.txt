@@ -1,0 +1,149 @@
+File_Name: Apex_Overview.txt
+File_Path: Apex/System/Masters/Apex_Overview.txt
+Purpose: Provides a High-Level Overview of the Apex System’s Design, Capabilities, and Self-Improvement Mechanisms to Inform Grok for Collaboration with Len and Future Users
+Envisioned_By: Len
+Version: 6.2
+Modified: 18-Aug-2025, 07:59 PM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Operating_Files_List.txt (AOFL), Role: Indexes core and supplementary files for session loading, Tag: #Masters
+- Apex_Files_Template.txt (AFT), Role: Defines file standards and universal rules, Tag: #Masters
+- Apex_Hub.txt (AH), Role: Central navigation for projects and files, Tag: #Masters
+- Apex_Tasks_Snapshot.txt (ATS), Role: Tracks ongoing system tasks, Tag: #Task_Management
+- Apex_Learnings.txt (AL), Role: Archives learnings, analogies, and metaphors for reference, Tag: #Learnings
+- Rule_Catalogue.txt (RC), Role: Archives all rules with detailed descriptions, used on-demand, Tag: #Masters
+- Tag_Catalogue.txt (TC), Role: Archives and standardises tags with detailed descriptions, used on-demand for new tags, Tag: #Masters
+- Grok_Apex_Report.txt (GAR), Role: Logs audit results and improvement proposals, Tag: #System_Audit
+- Apex_Ideas_Roadmap.txt (AIR), Role: Captures planned enhancements for future automation, Tag: #Roadmap
+]
+COUNT: 9 Dependencies
+Tags: [#Apex_System, #Overview, #System_Design, #Scalability, #Self_Improvement, #System_Audit]
+Status: Active
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 5.9
+File_Type: Master
+Section_Count: 6
+File_Hash: [Not_Implemented]
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Overview_v6.2.txt Content Complete?
+
+[Content_Start]
+
+[File_Control]
+Description: Manages Instructions, Rules, Overrides, and Validation for Overview Maintenance
+
+[File_Control_Rules]
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count and File_Hash
+  - Prompt: "Len, Apex_Overview.txt (AO) truncated: X/6 sections. Reshare?"
+  - Status: Active
+  - Tags: [#Validation, #Universal]
+- VAL002: Control_Validation_Rule
+  - Description: Ensures File_Control subsections
+  - Prompt: "Len, missing [Subsection] in Apex_Overview.txt (AO) [File_Control]. Reshare?"
+  - Status: Active
+  - Tags: [#Validation, #FileSpecific]
+- SHL001: Reset_Pack
+  - Description: Prompts for master resharing on detection of issues
+  - Prompt: "Len, truncation or context loss detected in Apex_Overview.txt (AO). Reshare master or load from workspace, per SHL004?"
+  - Status: Active
+  - Tags: [#Self_Healing, #Universal]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves unmodified content during updates
+  - Prompt: "Len, content removed in Apex_Overview.txt (AO). Confirm intent?"
+  - Status: Active
+  - Tags: [#Self_Healing, #Universal]
+- SHL004: Truncation_Fetch_Rule
+  - Description: Handles truncated masters by prompting reshare from workspace (GitHub deprecated due to restrictions)
+  - Prompt: "Len, Apex_Overview.txt (AO) truncated. Reshare master from workspace?"
+  - Status: Active
+  - Tags: [#Self_Healing, #Universal]
+- CHAT017: Session_Snapshot_Detail
+  - Description: Ensures task snapshot files capture significant tasks, context, and outcomes
+  - Prompt: "Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Tasks_Snapshot.txt (ATS) with status?"
+  - Status: Active
+  - Tags: [#Logging, #Session_Management, #Universal]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures chat learnings and corrections in task snapshot files for integration into Apex_Learnings.txt or Rule_Catalogue.txt
+  - Prompt: "Len, log learning/correction [Description] to task snapshot file? Move to Apex_Learnings.txt or other file?"
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement, #Universal]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures non-versioned references except in dependencies or logs
+  - Prompt: "Len, inconsistent reference in Apex_Overview.txt (AO). Update?"
+  - Status: Active
+  - Tags: [#Formatting, #Universal]
+- CHAT031: Prompt_Instruction_Separation
+  - Description: Distinguishes conversational prompts (CHATxxx) from internal instructions (VAL/FMTxxx); resolves overlaps via user confirmation
+  - Prompt: "Len, prompt/instruction overlap in [Rule]. Confirm separation?"
+  - Status: Active
+  - Tags: [#Clarification, #Universal]
+- CHAT033: Rule_Conflict_Resolution
+  - Description: Prioritizes file-specific rules over universals; flags conflicts via prompt
+  - Prompt: "Len, rule conflict between universal [Rule] in AFT and specific in [File]. Use specific?"
+  - Status: Active
+  - Tags: [#Hierarchy, #Universal]
+- CHAT035: Master_Reshare_Prompt
+  - Description: Ensures explicit reshare of masters before updates in multi-file sessions
+  - Prompt: "Len, reshare [File_Name] master from workspace before applying changes?"
+  - Status: Active
+  - Tags: [#Verbatim, #Universal]
+- CHAT036: Assumption_Flag
+  - Description: Flags assumptions about content removal or changes for user confirmation
+  - Prompt: "Len, unsure on [element] in [File_Name]. Retain or remove?"
+  - Status: Active
+  - Tags: [#Clarification, #Universal]
+
+[Instructions]
+- Validate against Apex_Files_Template.txt, ensuring Section_Count: 6, per VAL001.
+- Use British English, FMT008 (CamelCase, full stops), non-versioned references except in dependencies, per CHAT026.
+- Prompt for confirmation before outputting updates, per CHAT014.
+- Apply universal rules from Apex_Files_Template.txt and file-specific rules embedded here during loads/updates.
+- Reference Apex_Learnings.txt for learnings/analogies and Rule_Catalogue.txt for rule details on-demand; reshare masters before updates, per CHAT035.
+
+[Overrides_Exceptions]
+Description: Specifies exceptions to Apex_Files_Template.txt standards for Apex_Overview.txt
+- Exception: VAL002 allows additional subsections in [File_Control] beyond standard AFT requirements, tailored for overview complexity.
+- Exception: FMT015 permits versioned references in [Dependencies] for traceability, overriding non-versioned rule in specific contexts.
+COUNT: 2 Exceptions
+
+[Apex_System_Overview]
+Description: High-Level Overview of the Apex System
+Apex is a modular platform for managing diverse projects such as Len_Writing, Video_Games, Home_Household, and Websites, emphasizing scalability, self-improvement, and mitigation of AI limitations like truncation and context loss. It leverages standalone masters with embedded rules/instructions for self-containment, centralized archives for reference, and explicit reshares to ensure verbatim updates.
+
+[Design]
+Description: Core Design Principles
+- Modular structure with standalone masters using unversioned filenames and internal versions for traceability.
+- Self-healing through universal rules in Apex_Files_Template.txt (e.g., validation, truncation handling) and file-specific rules embedded for on-demand activation.
+- Rule hierarchy: Universal rules (centralized in Apex_Files_Template.txt, always-active via Apex_Operating_Files_List.txt core set) provide baseline consistency; file-specific rules override for tailored function, with conflicts resolved via prompts (CHAT033).
+- Interrelationships managed via dependencies (indicating critical references) and tags (categorizing purpose, e.g., #Universal vs. #FileSpecific).
+- Centralized archives: Rule_Catalogue.txt for rule details, Apex_Learnings.txt for learnings, analogies, and metaphors—applied practically via tasks without embedding.
+- Navigation via hubs like Apex_Hub.txt, Len_Master_Hub.txt, Writing_Hub.txt, Video_Game_Hub.txt, Deep_Sea_NN_Wars_Hub.txt, Home_Household_Hub.txt, and Websites_Hub.txt, facilitating modular project management across files and projects.
+
+[Current_Capabilities]
+Description: Key Features
+- Task management decentralised across projects, with Apex_Tasks_Snapshot.txt for ongoing tasks, Apex_Completed_Tasks_Logs.txt for completed tasks and major changes, and project-specific equivalents (e.g., Writing_Tasks_Snapshot.txt).
+- File access prioritised via workspace uploads or explicit reshares to ensure verbatim masters, mitigating truncation; GitHub fetches deprecated due to restrictions (INS026).
+- Session start guided by Apex_Operating_Files_List.txt core set (e.g., Apex_Files_Template.txt, Apex_Overview.txt, Apex_Tasks_Snapshot.txt, Apex_Hub.txt), ensuring structured setup with universal rules and file load order, per CHAT027.
+- Auditing and improvement through Grok_Apex_Report.txt, with learnings captured in Apex_Learnings.txt and applied via Apex_Tasks_Snapshot.txt tasks.
+- Distinction between prompts (conversational, user-driven) and instructions (internal, rule-based), with rules tagged for clarity (#Universal vs. #FileSpecific).
+- Explicit reshares ensure verbatim masters in multi-file updates, prompted by Apex_Operating_Files_List.txt instructions (CHAT035).
+- Offline parsing via Multi_Tool.py supports validation and integrity checks, complementing manual processes.
+
+[System_Evolution]
+Description: Mechanisms for Future Evolution and Self-Improvement
+Apex evolves through iterative learnings and audits, with major changes (e.g., direction shifts, version bumps) tracked in Apex_Completed_Tasks_Logs.txt for troubleshooting—per-file logs deprecated to reduce bloat. Learnings, analogies (e.g., ANA004: hubs as train carriages, ANA009: AOFL as library desk), and metaphors archived in Apex_Learnings.txt inform updates without direct embedding, applied via tasks in Apex_Tasks_Snapshot.txt. Universal rules centralized in Apex_Files_Template.txt for always-active consistency, file-specific embedded for on-demand use. Explicit reshares ensure verbatim masters in multi-file updates, prioritizing workspace over restricted GitHub (INS026). Scalability for multiple users via user hubs (e.g., Len_Master_Hub.txt, Writing_Hub.txt) and standardized project structures. Future enhancements include Flask UI for navigation and additional resources indexed in Apex_Ideas_Roadmap.txt, per AIR. Assumption flagging (CHAT036) prevents unintended content loss, ensuring iterative refinements align with user intent.
+
+[Validation_Counts]
+Description: Tracks counts for validation of Apex_Overview.txt
+COUNT:
+- Dependencies: 9
+- File_Control_Rules: 12
+- Instructions_Items: 5
+- Overrides_Exceptions: 2
+- Tags: 6
+
+[Content_End]
