@@ -1,0 +1,253 @@
+File_Name: Apex_Operating_Files_List.txt
+File_Path: Apex/System/Session_Files/Apex_Operating_Files_List.txt
+Purpose: Indexes core and supplementary files for Apex system operations, session management, and evolution, emphasizing manual chat-based sharing to mitigate access limitations
+Author: Len
+Version: 8.5
+Modified: 22-Aug-2025, 15:45 PM CEST
+Timezone: UTC+2
+Dependencies: [
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters
+- Apex_Overview.txt, Role: Provides system overview, Tag: #Masters
+- Apex_Hub.txt, Role: Central navigation for projects, Tag: #Masters
+- Apex_Tasks_Snapshot.txt, Role: Tracks ongoing tasks, Tag: #Task_Management
+- Apex_Learnings.txt, Role: Archives insights, analogies, and metaphors, Tag: #Insights
+- Rule_Catalogue.txt, Role: Lists all rules, Tag: #Masters
+- Tag_Catalogue.txt, Role: Standardizes tags, Tag: #Masters
+- Apex_Audit_Process.txt, Role: Defines audit processes, Tag: #Auditing
+]
+COUNT: 8 Dependencies
+Tags: [#Masters, #File_Management, #Session_Management, #Apex_System, #Self_Improvement]
+Status: Active
+Owner: Len
+Hub: Apex_Hub.txt
+Project: Apex_System
+Critical: True
+Last_Known_Stable: 8.4
+File_Type: Index
+Section_Count: 7
+Scope: System-Wide
+Prompt: Len, Confirm Apex_Operating_Files_List_v8.5.txt Content Complete?
+
+[Content_Start]
+
+[File_Control]
+Description: Manages Instructions, Rules, and Validation for File Indexing
+
+[File_Control_Rules]
+- VAL001: File_Validation_Rule
+  - Description: Verifies Section_Count
+  - Prompt: "Len, Apex_Operating_Files_List.txt truncated: X/7 sections. Paste full version?"
+  - Status: Active
+  - Tags: [#Validation]
+- VAL002: Control_Validation_Rule
+  - Description: Ensures File_Control subsections
+  - Prompt: "Len, missing [Subsection] in Apex_Operating_Files_List.txt [File_Control]. Paste full version?"
+  - Status: Active
+  - Tags: [#Validation]
+- VAL003: Rule_Naming_Rule
+  - Description: Ensures consistent rule naming conventions
+  - Prompt: "Len, rule [Rule_ID] in Apex_Operating_Files_List.txt violates naming convention. Update?"
+  - Status: Active
+  - Tags: [#Validation]
+- VAL004: Version_Consistency_Rule
+  - Description: Ensures version consistency across files
+  - Prompt: "Len, Apex_Operating_Files_List.txt version mismatch with [Dependency]. Paste latest version?"
+  - Status: Active
+  - Tags: [#Validation]
+- VAL005: Content_Integrity_Rule
+  - Description: Ensures content preservation across master versions
+  - Prompt: "Len, content missing in Apex_Operating_Files_List.txt compared to Last_Known_Stable: v8.4. Restore?"
+  - Status: Active
+  - Tags: [#Validation, #Self_Healing]
+- VAL006: Verbatim_Copy_Rule
+  - Description: Ensures all content from the current master is copied verbatim into the new version before updates
+  - Prompt: "Len, content missing in Apex_Operating_Files_List.txt. Paste Last_Known_Stable: v8.4?"
+  - Status: Active
+  - Tags: [#Validation]
+- VAL007: Drift_Check_Rule
+  - Description: Checks files for compliance during chat
+  - Prompt: "Len, [File_Name].txt deviates from AFT standards. Align?"
+  - Status: Active
+  - Tags: [#Validation]
+- SHL001: Reset_Pack
+  - Description: Prompts for master resharing
+  - Prompt: "Len, truncation detected in Apex_Operating_Files_List.txt. Paste full version?"
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL003: Content_Preservation_Rule
+  - Description: Preserves content unless approved
+  - Prompt: "Len, content removed in Apex_Operating_Files_List.txt. Confirm intent?"
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL004: Truncation_Fetch_Rule
+  - Description: Handles truncation by prompting manual paste
+  - Prompt: "Len, Apex_Operating_Files_List.txt truncated. Paste full version?"
+  - Status: Active
+  - Tags: [#Self_Healing]
+- SHL006: Manual_Share_Rule
+  - Description: Prompts manual paste for file receipt
+  - Prompt: "Len, paste [File_Name].txt for validation?"
+  - Status: Active
+  - Tags: [#Self_Healing]
+- CHAT017: Session_Snapshot_Detail
+  - Description: Logs tasks to Apex_Completed_Tasks_Logs.txt
+  - Prompt: "Len, log [Task_ID], [File_Name].txt, [Project], [Decision] to Apex_Completed_Tasks_Logs.txt?"
+  - Status: Active
+  - Tags: [#Logging, #Session_Management]
+- PRJ010: Learning_Capture_Rule
+  - Description: Captures learnings for Apex_Learnings.txt
+  - Prompt: "Len, log learning [Description] to Apex_Completed_Tasks_Logs.txt? Move to Apex_Learnings.txt?"
+  - Status: Active
+  - Tags: [#Task_Management, #Self_Improvement]
+- CHAT026: Reference_Consistency_Rule
+  - Description: Ensures non-versioned references in all sections, including [Dependencies], assuming latest master unless truncated or incorrect, per FMT001. Versioned references used only in [Change_Log] or external logs (e.g., Apex_Completed_Tasks_Logs.txt).
+  - Prompt: "Len, [File_Name].txt uses versioned reference. Update to non-versioned?"
+  - Status: Active
+  - Tags: [#Formatting, #Consistency]
+- CHAT027: File_Loading_Optimization_Rule
+  - Description: Loads supplementary files only for tasks
+  - Prompt: "Len, load Apex_Learnings.txt or Rule_Catalogue.txt for [Task_ID]?"
+  - Status: Active
+  - Tags: [#Collaboration, #Efficiency]
+- CHAT028: Filename_Clarity_Rule
+  - Description: Ensures full filenames in chat responses
+  - Prompt: "Len, confirm usage of full filename Apex_Operating_Files_List.txt?"
+  - Status: Active
+  - Tags: [#Session_Management, #Clarity]
+- CHAT029: File_Receipt_Validation
+  - Description: Validates files on receipt
+  - Prompt: "Len, [File_Name].txt has X sections. Paste full version if truncated?"
+  - Status: Active
+  - Tags: [#Session_Management]
+- CHAT030: Dependency_Cross_Check
+  - Description: Validates dependencies against Apex_Operating_Files_List.txt
+  - Prompt: "Len, missing dependency [File_Name].txt. Paste?"
+  - Status: Active
+  - Tags: [#Session_Management]
+- CHAT031: File_Reshare_Prompt
+  - Description: Prompts resharing before updates
+  - Prompt: "Len, paste [File_Name].txt before updates?"
+  - Status: Active
+  - Tags: [#Session_Management]
+- CHAT032: Assumption_Flag
+  - Description: Flags formatting assumptions
+  - Prompt: "Len, unsure on [Element] in [File_Name].txt. Retain or apply?"
+  - Status: Active
+  - Tags: [#Formatting]
+- CHAT033: Intent_Based_Loading_Rule
+  - Description: Loads only relevant hubs and task snapshots based on session intent to prevent task/file overload
+  - Prompt: "Len, load [Hub].txt and [Tasks_Snapshot].txt for [Project] intent?"
+  - Status: Active
+  - Tags: [#Session_Management, #Efficiency]
+- ONB004: User_Access_Rule
+  - Description: Restricts non-owner edits
+  - Prompt: "Len, restrict [User] edits to Apex_Operating_Files_List.txt?"
+  - Status: Active
+  - Tags: [#Onboarding, #Access]
+- PRJ021: Auto_Archive_Rule
+  - Description: Archives completed tasks and change logs to Apex_Completed_Tasks_Logs.txt after 5 tasks, every 30-60 minutes, on demand, or at session end
+  - Prompt: "Len, log pending completions/logs to Apex_Completed_Tasks_Logs.txt?"
+  - Status: Active
+  - Tags: [#Task_Management, #Archive]
+- PRJ013: Hub_Template_Extension
+  - Description: Prompts for [Custom_File_Requirements] in hubs
+  - Prompt: "Len, add [Custom_File_Requirements] to [Hub].txt for file types like [Type]?"
+  - Status: Optional, conditional
+  - Tags: [#Project]
+
+[Instructions]
+Description: Guides Grok in maintaining Apex_Operating_Files_List.txt and supporting Apex system operations
+
+[AOFL_Specific]
+- Update Apex_Operating_Files_List.txt with new files or dependencies, validating against Apex_Files_Template.txt per VAL001, ensuring Section_Count: 7.
+- Use non-versioned file references (e.g., Apex_Overview.txt) in all sections, including [Dependencies], per CHAT026. Output files as [File_Name]_vX.X.txt for Len’s local management.
+- Prompt for manual chat-based sharing of core files at session start: "Len, please paste Apex_Overview.txt to initiate the session."
+- Log completed tasks and change logs to Apex_Completed_Tasks_Logs.txt at session end, after ~5 tasks, every 30-60 minutes, or on demand, with verbose details (Task_ID, File, Project, Outcome, Date, Insights) to enable reversibility, per CHAT017, PRJ021.
+- Validate versions via headers, prompting for pastes if mismatches occur: "Len, Apex_Operating_Files_List.txt Version: 8.5, Last_Known_Stable: v8.4. Paste latest if mismatched?"
+- Use British English (e.g., “organise”, “summarise”), commas/periods, no emdashes, per FMT007.
+- Apply FMT008: CamelCase (excluding joining words), blank lines above headings/lists and between sections, no blank line before Description, full stops.
+- Log learnings to Apex_Learnings.txt and task outcomes to Apex_Completed_Tasks_Logs.txt, per PRJ010.
+- Verify deprecated files like Apex_PRD.txt for content integration before archival, prompting: "Len, paste Apex_PRD.txt to confirm archival?"
+
+[Apex_Chat_Session_Initialisation]
+Description: Guides session initialization to prevent file/task overload
+- Apex_Operating_Files_List.txt is pasted first to initiate sessions. Silently receive and validate per VAL001 in the background, prompting: "Len, please paste Apex_Overview.txt."
+- After receiving Apex_Overview.txt and Apex_Files_Template.txt, prompt: “Len, session intent: Apex_System (continue with Apex_Hub.txt, Len_Master_Hub.txt, Apex_Tasks_Snapshot.txt, Len_Master_Tasks_Snapshot.txt) or project-specific (e.g., Len_Writing, paste Len_Writing_Hub.txt and Writing_Tasks_Snapshot.txt)?”
+- For Apex_System sessions, continue sequentially: Apex_Hub.txt, Len_Master_Hub.txt, Apex_Tasks_Snapshot.txt, Len_Master_Tasks_Snapshot.txt, validating each on receipt. Cross-analyze for interrelationships (e.g., dependencies, rules), flag issues: "Len, files analyzed: [List_Files]. Issues: [Issue_List]. Confirm fixes?"
+- For project-specific sessions, skip remaining core files after intent confirmation, prompt for relevant hub/tasks: "Len, paste [Project_Hub].txt and [Project_Tasks_Snapshot].txt."
+- Use Len_Master_Tasks_Snapshot.txt to prioritize high-impact tasks across projects (Apex_System, Len_Writing, Home_Household, Video_Games, Websites), limiting to 5-10 tasks per session, per CHAT033.
+- Proceed to Apex_Tasks_Snapshot.txt or project-specific tasks once issues resolved, logging outcomes to Apex_Completed_Tasks_Logs.txt per PRJ021.
+
+[Universal]
+- Validate against Apex_Files_Template.txt subsections, per VAL001.
+- Enforce formatting via Formatting_Rules and self-healing via Self_Healing_Rules.
+- Maintain readability: one blank line before sections/subsections, hyphenated lists, 2-space indentation for lists, 4-space for metadata, commas/periods, no emdashes.
+- Do not remove content unless instructed, per SHL003.
+
+[Apex_Core_Session_Files]
+Description: Files manually pasted at session start for Apex system context, validated for compliance
+COUNT: 7 files
+- Apex_Overview.txt, Role: Provides system overview, Tag: #Masters, Path: Apex/System/Session_Files/Apex_Overview.txt
+- Apex_Operating_Files_List.txt, Role: Indexes core and supplementary files, Tag: #Masters, Path: Apex/System/Session_Files/Apex_Operating_Files_List.txt
+- Apex_Files_Template.txt, Role: Defines file standards, Tag: #Masters, Path: Apex/System/Session_Files/Apex_Files_Template.txt
+- Apex_Hub.txt, Role: Central navigation, Tag: #Masters, Path: Apex/System/Session_Files/Apex_Hub.txt
+- Apex_Tasks_Snapshot.txt, Role: Tracks ongoing tasks, Tag: #Task_Management, Path: Apex/System/Session_Files/Apex_Tasks_Snapshot.txt
+- Len_Master_Hub.txt, Role: User-specific hub, Tag: #Masters, Path: Apex/System/Session_Files/Len_Master_Hub.txt
+- Len_Master_Tasks_Snapshot.txt, Role: Aggregates high-priority tasks across projects, Tag: #Task_Management, Path: Apex/System/Session_Files/Len_Master_Tasks_Snapshot.txt
+
+[On_Demand_Files_Group1: Insights_and_Rules]
+Description: Loaded for learnings, rules, or insights integration
+COUNT: 3 files
+- Apex_Learnings.txt, Role: Archives insights, analogies, and metaphors, Tag: #Insights, Path: Apex/System/Session_Files/Apex_Learnings.txt
+- Rule_Catalogue.txt, Role: Lists all rules, Tag: #Masters, Path: Apex/System/Session_Files/Rule_Catalogue.txt
+- Tag_Catalogue.txt, Role: Standardizes tags, Tag: #Masters, Path: Apex/System/Session_Files/Tag_Catalogue.txt
+
+[On_Demand_Files_Group2: Writing_and_Social]
+Description: Loaded for writing tasks or social media projects
+COUNT: 4 files
+- Len_Writing_Hub.txt, Role: Manages writing projects, Tag: #Project_Hub, Path: Apex/Projects/Writing/Len_Writing_Hub.txt
+- Len_Worldview_2025.txt, Role: Defines user worldview, Tag: #Masters, Path: Apex/System/Session_Files/Len_Worldview_2025.txt
+- Len_X_Reply_Log.txt, Role: Logs social media interactions, Tag: #Masters, Path: Apex/System/Session_Files/Len_X_Reply_Log.txt
+- Online_Strategy_2025.txt, Role: Guides online strategy, Tag: #Masters, Path: Apex/System/Session_Files/Online_Strategy_2025.txt
+
+[On_Demand_Files_Group3: Projects]
+Description: Loaded for specific project tasks
+COUNT: 3 files
+- Deep_Sea_NN_Wars_Hub.txt, Role: Manages game project, Tag: #Project_Hub, Path: Apex/Projects/Video_Games/Deep_Sea_NN_Wars/Deep_Sea_NN_Wars_Hub.txt
+- Video_Game_Hub.txt, Role: Manages video game projects, Tag: #Project_Hub, Path: Apex/Projects/Video_Games/Video_Game_Hub.txt
+- Home_Household_Hub.txt, Role: Manages household tasks, Tag: #Project_Hub, Path: Apex/Projects/Home_Household/Home_Household_Hub.txt
+
+[On_Demand_Files_Group4: Audits]
+Description: Loaded for system audits, limitation testing, or task archiving
+COUNT: 5 files
+- Apex_Audit_Process.txt, Role: Defines audit processes, Tag: #Auditing, Path: Apex/System/Session_Files/Apex_Audit_Process.txt
+- Grok_Apex_Report.txt, Role: Logs audit results, Tag: #Auditing, Path: Apex/System/Session_Files/Grok_Apex_Report.txt
+- Apex_Completed_Tasks_Logs.txt, Role: Archives completed tasks and change logs, Tag: #Task_Management, Path: Apex/System/Session_Files/Apex_Completed_Tasks_Logs.txt
+- Apex_PRD.txt, Role: Documents product requirements, Tag: #System_Setup, Path: Apex/System/In_Progress/Apex_PRD.txt
+- Apex_Git_Setup_Guide.txt, Role: Documents Git setup and workflow, Tag: #System_Setup, Path: Apex/System/In_Progress/Apex_Git_Setup_Guide.txt
+
+[On_Demand_Files_Group5: Templates]
+Description: Loaded for onboarding new files/projects
+COUNT: 1 file
+- User_File_Template.txt, Role: Guides creation of new files, Tag: #Template, Path: Apex/System/Session_Files/User_File_Template.txt
+
+[Validation_Counts]
+Description: Tracks Essential Counts for Validation
+COUNT:
+- Dependencies: 8
+- File_Control_Rules: 23
+- Instructions_Items: 9
+- Apex_Core_Session_Files_Items: 7
+- On_Demand_Files_Group1_Items: 3
+- On_Demand_Files_Group2_Items: 4
+- On_Demand_Files_Group3_Items: 3
+- On_Demand_Files_Group4_Items: 5
+- On_Demand_Files_Group5_Items: 1
+
+[Change_Log]
+Description: Tracks significant updates to Apex_Operating_Files_List.txt, up to 5 entries, per FMT009
+COUNT: 2 entries
+- 21-Aug-2025: Updated to v8.3: Updated File_Path to Session_Files per ATS124, added Apex_PRD.txt and Apex_Git_Setup_Guide.txt to [On_Demand_Files_Group4: Audits] per ATS126, reviewed v8.2 per ATS127 with no substantive changes beyond date, validated per Apex_Files_Template_v3.9.txt, per CHAT017.
+- 22-Aug-2025: Updated to v8.5: Added Len_Master_Tasks_Snapshot.txt to [Apex_Core_Session_Files], revised CHAT026 for non-versioned references, validated per Apex_Files_Template_v4.1.txt, per CHAT017, ATS137, ATS138, ATS139.
+
+[Content_End]
